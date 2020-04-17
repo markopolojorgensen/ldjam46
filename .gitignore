@@ -1,0 +1,12 @@
+# Godot-specific ignores
+.import/
+export.cfg
+export_presets.cfg
+
+notes/commit_notes.txt
+notes/.~lock*
+
+*.import
+
+# mac garbage?
+.DS_STORE
