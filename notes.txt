@@ -1,10 +1,75 @@
-
-
-1120x630
-
+1119x630
+373x210
 
 
 
+keep it alive
+
+
+PHASE ONE
+  one player
+  one enemy type
+  no environmental hazards
+
+  player movement
+  enemy movement
+  enemy aggro (player and payload)
+  starting ability: melee swing
+  walls
+  one path
+  camera stuff
+  one stage, twice
+    second time through, more enemies
+  one choice:
+    personal armor & aggro grab
+    aoe ranged damage & payload defends itself
+  main upbeat music
+  TUTORIAL
+
+PHASE TWO
+  disco ball???
+  shadows for player and enemies and payload
+
+
+autonomy
+  strategy choices
+    hunting down enemies or bodyguarding the payload
+relatedness
+  some enemies are stronger than others
+competence
+  long term growth
+    a new ability after every stage
+
+
+
+path choices
+environmental hazards
+health doesn't reset between stages
+
+art
+  player
+  several enemies
+  bosses?
+  stage decorations
+  payload
+  tracks
+  ability
+
+music
+  ability choice
+  escort music (lowkey and intense)
+
+passive abilities
+  health regeneration (during stages?)
+  health regeneration (between stages?)
+  payload armor
+  personal armor
+  payload moves faster
+  payload moves faster when you're next to it?
+active abilities
+  warcry? grab aggro aoe
+  aoe damage
+  single target
 
 
 
@@ -37,17 +102,18 @@
 
 
 playlist
+  donkey kong country
+  esa
+  fez
+
   age of mythology
   chrono trigger
   crypt of the necrodancer
-  esa
-  donkey kong country
   secret of mana
   ff6
   ff12
   ffcc
   ffta
-  fez
   hyper light drifter
   ftl
   into the breach
