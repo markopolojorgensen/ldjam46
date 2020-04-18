@@ -1,5 +1,6 @@
 
 
+1120x630
 
 
 
@@ -31,6 +32,47 @@
 
 
 
+
+
+
+
+playlist
+  age of mythology
+  chrono trigger
+  crypt of the necrodancer
+  esa
+  donkey kong country
+  secret of mana
+  ff6
+  ff12
+  ffcc
+  ffta
+  fez
+  hyper light drifter
+  ftl
+  into the breach
+  stardew valley
+  celeste
+  bastion
+  transistor
+  clustertruck?
+  hollow knight
+  katana zero
+  kingdom?
+  minit?
+  monolith
+  risk of rain
+  undertale
+  mirror's edge
+  double dash
+  sm sunshine
+  wind waker
+  twilight princess
+  botw
+  lttp
+  oot forest temple
+
+  furi
 
 
 

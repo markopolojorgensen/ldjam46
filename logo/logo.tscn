@@ -1,0 +1,100 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://logo/logo stinger.ogg" type="AudioStream" id=1]
+[ext_resource path="res://logo/materialize_11.png" type="Texture" id=2]
+[ext_resource path="res://logo/materialize_22.png" type="Texture" id=3]
+[ext_resource path="res://logo/materialize_21.png" type="Texture" id=4]
+[ext_resource path="res://logo/materialize_20.png" type="Texture" id=5]
+[ext_resource path="res://logo/materialize_19.png" type="Texture" id=6]
+[ext_resource path="res://logo/materialize_18.png" type="Texture" id=7]
+[ext_resource path="res://logo/materialize_07.png" type="Texture" id=8]
+[ext_resource path="res://logo/materialize_06.png" type="Texture" id=9]
+[ext_resource path="res://logo/materialize_03.png" type="Texture" id=10]
+[ext_resource path="res://logo/materialize_14.png" type="Texture" id=11]
+[ext_resource path="res://logo/materialize_13.png" type="Texture" id=12]
+[ext_resource path="res://logo/materialize_12.png" type="Texture" id=13]
+[ext_resource path="res://logo/materialize_09.png" type="Texture" id=14]
+[ext_resource path="res://logo/materialize_15.png" type="Texture" id=15]
+[ext_resource path="res://logo/materialize_24.png" type="Texture" id=16]
+[ext_resource path="res://logo/materialize_08.png" type="Texture" id=17]
+[ext_resource path="res://logo/materialize_16.png" type="Texture" id=18]
+[ext_resource path="res://logo/materialize_17.png" type="Texture" id=19]
+[ext_resource path="res://logo/materialize_05.png" type="Texture" id=20]
+[ext_resource path="res://logo/materialize_10.png" type="Texture" id=21]
+[ext_resource path="res://logo/materialize_23.png" type="Texture" id=22]
+[ext_resource path="res://logo/materialize_00.png" type="Texture" id=23]
+[ext_resource path="res://logo/materialize_04.png" type="Texture" id=24]
+[ext_resource path="res://logo/materialize_02.png" type="Texture" id=25]
+[ext_resource path="res://logo/materialize_01.png" type="Texture" id=26]
+[ext_resource path="res://logo/logo.gd" type="Script" id=27]
+[ext_resource path="res://logo/logo_bg.png" type="Texture" id=28]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 23 ), ExtResource( 26 ), ExtResource( 25 ), ExtResource( 10 ), ExtResource( 24 ), ExtResource( 20 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 17 ), ExtResource( 14 ), ExtResource( 21 ), ExtResource( 2 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 22 ), ExtResource( 16 ) ],
+"loop": false,
+"name": "default",
+"speed": 30.0
+} ]
+
+[sub_resource type="Animation" id=2]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/MarginContainer/CenterContainer/Control/node_2d:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="logo" type="Node2D"]
+modulate = Color( 1, 1, 1, 0 )
+script = ExtResource( 27 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/MarginContainer"]
+margin_right = 1120.0
+margin_bottom = 630.0
+
+[node name="Control" type="Control" parent="CanvasLayer/MarginContainer/CenterContainer"]
+margin_left = 560.0
+margin_top = 315.0
+margin_right = 560.0
+margin_bottom = 315.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="node_2d" type="Node2D" parent="CanvasLayer/MarginContainer/CenterContainer/Control"]
+
+[node name="logo_bg" type="Sprite" parent="CanvasLayer/MarginContainer/CenterContainer/Control/node_2d"]
+scale = Vector2( 112, 63 )
+texture = ExtResource( 28 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="CanvasLayer/MarginContainer/CenterContainer/Control/node_2d"]
+scale = Vector2( 3, 3 )
+frames = SubResource( 1 )
+
+[node name="timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="animation_player" type="AnimationPlayer" parent="."]
+anims/fade_out = SubResource( 2 )
+[connection signal="timeout" from="timer" to="." method="play_logo"]
