@@ -1,0 +1,150 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_18.png" type="Texture" id=1]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_02.png" type="Texture" id=2]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_05.png" type="Texture" id=3]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_17.png" type="Texture" id=4]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_04.png" type="Texture" id=5]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_14.png" type="Texture" id=6]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_01.png" type="Texture" id=7]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_06.png" type="Texture" id=8]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_10.png" type="Texture" id=9]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_08.png" type="Texture" id=10]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_21.png" type="Texture" id=11]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_19.png" type="Texture" id=12]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_07.png" type="Texture" id=13]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_00.png" type="Texture" id=14]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_15.png" type="Texture" id=15]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_20.png" type="Texture" id=16]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_12.png" type="Texture" id=17]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_09.png" type="Texture" id=18]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_16.png" type="Texture" id=19]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_13.png" type="Texture" id=20]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_03.png" type="Texture" id=21]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_11.png" type="Texture" id=22]
+[ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_22.png" type="Texture" id=23]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+func _ready():
+	$animation_player.play(\"swing\")
+	
+	yield($animation_player, \"animation_finished\")
+	
+	queue_free()
+
+func _on_hitbox_body_entered(body):
+	if body.has_method(\"hit_by_grey_sword\"):
+		body.hit_by_grey_sword()
+
+"
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 21 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 10 ), ExtResource( 18 ), ExtResource( 9 ), ExtResource( 22 ), ExtResource( 17 ), ExtResource( 20 ), ExtResource( 6 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 12 ), ExtResource( 16 ), ExtResource( 11 ), ExtResource( 23 ) ],
+"loop": false,
+"name": "default",
+"speed": 60.0
+} ]
+
+[sub_resource type="Animation" id=6]
+resource_name = "swing"
+length = 0.4
+step = 0.005
+tracks/0/type = "value"
+tracks/0/path = NodePath("hitbox:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.185, 0.245, 0.398416 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -37.7301, 2.94455 ), Vector2( -37.7301, 2.94455 ), Vector2( -41.599, 27.7055 ), Vector2( -41.599, 27.7055 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("animated_sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.385 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 22 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("hitbox:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.185, 0.245, 0.398416 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 9.98418, 9.98418, 99.862, 99.862 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("hitbox:collision_mask")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.185, 0.245 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 4, 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.05, 0.35, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("hitbox/collision_polygon_2d:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.185, 0.265 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[node name="grey_sword" type="Node2D"]
+script = SubResource( 1 )
+
+[node name="animated_sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 3, 3 )
+z_index = -1
+frames = SubResource( 5 )
+frame = 10
+
+[node name="animation_player" type="AnimationPlayer" parent="."]
+anims/swing = SubResource( 6 )
+
+[node name="hitbox" type="Area2D" parent="."]
+position = Vector2( -37.7301, 2.94455 )
+rotation = 0.174257
+collision_layer = 0
+collision_mask = 4
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="hitbox"]
+position = Vector2( 19.502, -42.486 )
+rotation = -0.00966421
+polygon = PoolVector2Array( -52.2221, -14.3203, 21.7711, -45.1333, 76.0924, 1.25233, 0.588037, 50.3568 )
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

@@ -2,7 +2,6 @@
 373x210
 
 
-
 keep it alive
 
 
@@ -10,25 +9,44 @@ PHASE ONE
   one player
   one enemy type
   no environmental hazards
-
+  camera stuff
   player movement
-  enemy movement
+  payload
+  one path
+  payload movement
+  goalposts
   enemy aggro (player and payload)
+  enemy movement
+  payload health
+  enemy health
+  enemies have small melee swing
   starting ability: melee swing
   walls
-  one path
-  camera stuff
+  goal
+
+  you win menu
+  you lose menu
+
   one stage, twice
     second time through, more enemies
   one choice:
-    personal armor & aggro grab
+    personal armor & summon wall?
     aoe ranged damage & payload defends itself
   main upbeat music
   TUTORIAL
 
 PHASE TWO
-  disco ball???
+  payload heart internal
+  menu
   shadows for player and enemies and payload
+  disco ball???
+  payload continues beyond player death?
+  animated payload health bar
+  payload speeds up if there's no enemies
+
+SHIP IT
+  delete leftover pfxd frames
+
 
 
 autonomy
@@ -60,12 +78,14 @@ music
   escort music (lowkey and intense)
 
 passive abilities
-  health regeneration (during stages?)
-  health regeneration (between stages?)
+  player health regeneration (during stages?)
+  player health regeneration (between stages?)
+  payload health regen
   payload armor
   personal armor
   payload moves faster
   payload moves faster when you're next to it?
+  swing as fast as you can click
 active abilities
   warcry? grab aggro aoe
   aoe damage
@@ -105,13 +125,13 @@ playlist
   donkey kong country
   esa
   fez
-
   age of mythology
+
+  ff12
   chrono trigger
   crypt of the necrodancer
   secret of mana
   ff6
-  ff12
   ffcc
   ffta
   hyper light drifter

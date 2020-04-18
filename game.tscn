@@ -1,6 +1,6 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=205 format=2]
 
-[ext_resource path="res://external/aseprite/ground.png" type="Texture" id=1]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_14.png" type="Texture" id=1]
 [ext_resource path="res://enemy/small_red_enemy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://external/pfxd/player/aseprite_frames/player_30.png" type="Texture" id=3]
 [ext_resource path="res://external/pfxd/player/aseprite_frames/player_27.png" type="Texture" id=4]
@@ -64,14 +64,186 @@
 [ext_resource path="res://external/pfxd/player/aseprite_frames/player_33.png" type="Texture" id=62]
 [ext_resource path="res://player.gd" type="Script" id=63]
 [ext_resource path="res://game.gd" type="Script" id=64]
-[ext_resource path="res://camera/camera.gd" type="Script" id=65]
-[ext_resource path="res://camera/focus_limiter.gd" type="Script" id=66]
-[ext_resource path="res://camera/area_camera_limits.gd" type="Script" id=67]
+[ext_resource path="res://addons/camera_limiter/focus_limiter.gd" type="Script" id=65]
+[ext_resource path="res://addons/movement/top_down_movement.gd" type="Script" id=66]
+[ext_resource path="res://addons/camera_limiter/camera_limiting_area.gd" type="Script" id=67]
+[ext_resource path="res://addons/movement/user_input_direction.gd" type="Script" id=68]
+[ext_resource path="res://external/aseprite/tiles.png" type="Texture" id=69]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_03.png" type="Texture" id=70]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_00.png" type="Texture" id=71]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_18.png" type="Texture" id=72]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_04.png" type="Texture" id=73]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_26.png" type="Texture" id=74]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_51.png" type="Texture" id=75]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_53.png" type="Texture" id=76]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_52.png" type="Texture" id=77]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_25.png" type="Texture" id=78]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_15.png" type="Texture" id=79]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_11.png" type="Texture" id=80]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_13.png" type="Texture" id=81]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_36.png" type="Texture" id=82]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_45.png" type="Texture" id=83]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_02.png" type="Texture" id=84]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_06.png" type="Texture" id=85]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_37.png" type="Texture" id=86]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_16.png" type="Texture" id=87]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_08.png" type="Texture" id=88]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_01.png" type="Texture" id=89]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_21.png" type="Texture" id=90]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_30.png" type="Texture" id=91]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_07.png" type="Texture" id=92]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_24.png" type="Texture" id=93]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_35.png" type="Texture" id=94]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_34.png" type="Texture" id=95]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_42.png" type="Texture" id=96]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_10.png" type="Texture" id=97]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_09.png" type="Texture" id=98]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_17.png" type="Texture" id=99]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_05.png" type="Texture" id=100]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_44.png" type="Texture" id=101]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_46.png" type="Texture" id=102]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_23.png" type="Texture" id=103]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_27.png" type="Texture" id=104]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_59.png" type="Texture" id=105]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_54.png" type="Texture" id=106]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_47.png" type="Texture" id=107]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_50.png" type="Texture" id=108]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_49.png" type="Texture" id=109]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_48.png" type="Texture" id=110]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_32.png" type="Texture" id=111]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_12.png" type="Texture" id=112]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_38.png" type="Texture" id=113]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_43.png" type="Texture" id=114]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_31.png" type="Texture" id=115]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_29.png" type="Texture" id=116]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_28.png" type="Texture" id=117]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_55.png" type="Texture" id=118]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_33.png" type="Texture" id=119]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_41.png" type="Texture" id=120]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_40.png" type="Texture" id=121]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_22.png" type="Texture" id=122]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_57.png" type="Texture" id=123]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_56.png" type="Texture" id=124]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_58.png" type="Texture" id=125]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_20.png" type="Texture" id=126]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_19.png" type="Texture" id=127]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_39.png" type="Texture" id=128]
+[ext_resource path="res://payload.gd" type="Script" id=129]
+[ext_resource path="res://waypoint.tscn" type="PackedScene" id=130]
+[ext_resource path="res://addons/aggro/aggro.gd" type="Script" id=131]
+[ext_resource path="res://external/aseprite/heart_of_gold_00.png" type="Texture" id=132]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_03.png" type="Texture" id=133]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_26.png" type="Texture" id=134]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_37.png" type="Texture" id=135]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_30.png" type="Texture" id=136]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_45.png" type="Texture" id=137]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_24.png" type="Texture" id=138]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_07.png" type="Texture" id=139]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_19.png" type="Texture" id=140]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_56.png" type="Texture" id=141]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_16.png" type="Texture" id=142]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_33.png" type="Texture" id=143]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_27.png" type="Texture" id=144]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_15.png" type="Texture" id=145]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_52.png" type="Texture" id=146]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_11.png" type="Texture" id=147]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_23.png" type="Texture" id=148]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_05.png" type="Texture" id=149]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_10.png" type="Texture" id=150]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_43.png" type="Texture" id=151]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_42.png" type="Texture" id=152]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_01.png" type="Texture" id=153]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_17.png" type="Texture" id=154]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_04.png" type="Texture" id=155]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_50.png" type="Texture" id=156]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_40.png" type="Texture" id=157]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_18.png" type="Texture" id=158]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_47.png" type="Texture" id=159]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_22.png" type="Texture" id=160]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_21.png" type="Texture" id=161]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_08.png" type="Texture" id=162]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_48.png" type="Texture" id=163]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_39.png" type="Texture" id=164]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_38.png" type="Texture" id=165]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_53.png" type="Texture" id=166]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_49.png" type="Texture" id=167]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_00.png" type="Texture" id=168]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_35.png" type="Texture" id=169]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_29.png" type="Texture" id=170]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_12.png" type="Texture" id=171]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_36.png" type="Texture" id=172]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_31.png" type="Texture" id=173]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_51.png" type="Texture" id=174]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_20.png" type="Texture" id=175]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_41.png" type="Texture" id=176]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_44.png" type="Texture" id=177]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_32.png" type="Texture" id=178]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_13.png" type="Texture" id=179]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_06.png" type="Texture" id=180]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_34.png" type="Texture" id=181]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_28.png" type="Texture" id=182]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_46.png" type="Texture" id=183]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_55.png" type="Texture" id=184]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_54.png" type="Texture" id=185]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_09.png" type="Texture" id=186]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_58.png" type="Texture" id=187]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_57.png" type="Texture" id=188]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_14.png" type="Texture" id=189]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_02.png" type="Texture" id=190]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_25.png" type="Texture" id=191]
+[ext_resource path="res://external/aseprite/heart_of_gold_01.png" type="Texture" id=192]
+[ext_resource path="res://wall.tscn" type="PackedScene" id=193]
+[ext_resource path="res://goal_waypoint.tscn" type="PackedScene" id=194]
+
+[sub_resource type="TileSet" id=1]
+0/name = "tiles.png 0"
+0/texture = ExtResource( 69 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 256, 256 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [  ]
+0/z_index = 0
+1/name = "tiles.png 1"
+1/texture = ExtResource( 69 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 256, 0, 256, 256 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shapes = [  ]
+1/z_index = 0
+2/name = "tiles.png 2"
+2/texture = ExtResource( 69 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 256, 256, 256 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shapes = [  ]
+2/z_index = 0
+3/name = "tiles.png 3"
+3/texture = ExtResource( 69 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 256, 256, 256, 256 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shapes = [  ]
+3/z_index = 0
+
+[sub_resource type="PhysicsMaterial" id=2]
+friction = 0.25
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 33.0
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=4]
 animations = [ {
 "frames": [ ExtResource( 9 ), ExtResource( 22 ), ExtResource( 40 ), ExtResource( 5 ), ExtResource( 38 ), ExtResource( 31 ), ExtResource( 10 ), ExtResource( 49 ), ExtResource( 27 ), ExtResource( 35 ), ExtResource( 24 ), ExtResource( 29 ), ExtResource( 45 ), ExtResource( 34 ), ExtResource( 30 ), ExtResource( 20 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 39 ), ExtResource( 37 ), ExtResource( 11 ), ExtResource( 18 ), ExtResource( 33 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 4 ), ExtResource( 36 ), ExtResource( 28 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 60 ), ExtResource( 62 ), ExtResource( 25 ), ExtResource( 53 ), ExtResource( 26 ), ExtResource( 19 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 48 ), ExtResource( 56 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 32 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 59 ), ExtResource( 46 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 52 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 42 ), ExtResource( 41 ), ExtResource( 47 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 61 ) ],
 "loop": true,
@@ -79,66 +251,1419 @@ animations = [ {
 "speed": 60.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 559.5, 315 )
+[sub_resource type="PhysicsMaterial" id=9]
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 45.0
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 71 ), ExtResource( 89 ), ExtResource( 84 ), ExtResource( 70 ), ExtResource( 73 ), ExtResource( 100 ), ExtResource( 85 ), ExtResource( 92 ), ExtResource( 88 ), ExtResource( 98 ), ExtResource( 97 ), ExtResource( 80 ), ExtResource( 112 ), ExtResource( 81 ), ExtResource( 1 ), ExtResource( 79 ), ExtResource( 87 ), ExtResource( 99 ), ExtResource( 72 ), ExtResource( 127 ), ExtResource( 126 ), ExtResource( 90 ), ExtResource( 122 ), ExtResource( 103 ), ExtResource( 93 ), ExtResource( 78 ), ExtResource( 74 ), ExtResource( 104 ), ExtResource( 117 ), ExtResource( 116 ), ExtResource( 91 ), ExtResource( 115 ), ExtResource( 111 ), ExtResource( 119 ), ExtResource( 95 ), ExtResource( 94 ), ExtResource( 82 ), ExtResource( 86 ), ExtResource( 113 ), ExtResource( 128 ), ExtResource( 121 ), ExtResource( 120 ), ExtResource( 96 ), ExtResource( 114 ), ExtResource( 101 ), ExtResource( 83 ), ExtResource( 102 ), ExtResource( 107 ), ExtResource( 110 ), ExtResource( 109 ), ExtResource( 108 ), ExtResource( 75 ), ExtResource( 77 ), ExtResource( 76 ), ExtResource( 106 ), ExtResource( 118 ), ExtResource( 124 ), ExtResource( 123 ), ExtResource( 125 ), ExtResource( 105 ) ],
+"loop": true,
+"name": "default",
+"speed": 60.0
+} ]
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 700.0
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 168 ), ExtResource( 153 ), ExtResource( 190 ), ExtResource( 133 ), ExtResource( 155 ), ExtResource( 149 ), ExtResource( 180 ), ExtResource( 139 ), ExtResource( 162 ), ExtResource( 186 ), ExtResource( 150 ), ExtResource( 147 ), ExtResource( 171 ), ExtResource( 179 ), ExtResource( 189 ), ExtResource( 145 ), ExtResource( 142 ), ExtResource( 154 ), ExtResource( 158 ), ExtResource( 140 ), ExtResource( 175 ), ExtResource( 161 ), ExtResource( 160 ), ExtResource( 148 ), ExtResource( 138 ), ExtResource( 191 ), ExtResource( 134 ), ExtResource( 144 ), ExtResource( 182 ), ExtResource( 170 ), ExtResource( 136 ), ExtResource( 173 ), ExtResource( 178 ), ExtResource( 143 ), ExtResource( 181 ), ExtResource( 169 ), ExtResource( 172 ), ExtResource( 135 ), ExtResource( 165 ), ExtResource( 164 ), ExtResource( 157 ), ExtResource( 176 ), ExtResource( 152 ), ExtResource( 151 ), ExtResource( 177 ), ExtResource( 137 ), ExtResource( 183 ), ExtResource( 159 ), ExtResource( 163 ), ExtResource( 167 ), ExtResource( 156 ), ExtResource( 174 ), ExtResource( 146 ), ExtResource( 166 ), ExtResource( 185 ), ExtResource( 184 ), ExtResource( 141 ), ExtResource( 188 ), ExtResource( 187 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 561, 315 )
 
 [node name="game" type="Node2D"]
 script = ExtResource( 64 )
 
 [node name="stage" type="Node2D" parent="."]
 
-[node name="sprite" type="Sprite" parent="stage"]
-position = Vector2( 559.5, 315 )
+[node name="ground" type="TileMap" parent="stage"]
 scale = Vector2( 3, 3 )
-texture = ExtResource( 1 )
+z_index = -50
+tile_set = SubResource( 1 )
+cell_size = Vector2( 256, 256 )
+format = 1
+tile_data = PoolIntArray( -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0 )
 
 [node name="y_sort" type="YSort" parent="stage"]
 
 [node name="small_red_enemy" parent="stage/y_sort" instance=ExtResource( 2 )]
-position = Vector2( 482.933, 138.758 )
+position = Vector2( 923.933, 453 )
+
+[node name="small_red_enemy2" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 978, 488.242 )
+
+[node name="small_red_enemy3" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 807, 467.242 )
+
+[node name="small_red_enemy4" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 717, 515.242 )
 
 [node name="player" type="RigidBody2D" parent="stage/y_sort"]
-position = Vector2( 387.044, 248.786 )
+position = Vector2( 2868, -942 )
 collision_layer = 2
 collision_mask = 13
+mode = 2
+physics_material_override = SubResource( 2 )
+linear_damp = 10.0
 script = ExtResource( 63 )
+
+[node name="movement" type="Node" parent="stage/y_sort/player"]
+script = ExtResource( 66 )
+body_path = NodePath("..")
+direction_path = NodePath("direction")
+acceleration = 20000.0
+
+[node name="direction" type="Node" parent="stage/y_sort/player/movement"]
+script = ExtResource( 68 )
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="stage/y_sort/player"]
 shape = SubResource( 3 )
 
 [node name="animated_sprite" type="AnimatedSprite" parent="stage/y_sort/player"]
 scale = Vector2( 3, 3 )
-frames = SubResource( 1 )
+frames = SubResource( 4 )
 
 [node name="camera_2d" type="Camera2D" parent="stage/y_sort/player"]
 current = true
 smoothing_enabled = true
 smoothing_speed = 6.0
-script = ExtResource( 65 )
 
-[node name="focus_limiter" type="Node" parent="stage/y_sort/player/camera_2d"]
-script = ExtResource( 66 )
+[node name="camera_limiter" type="Node" parent="stage/y_sort/player/camera_2d"]
+script = ExtResource( 65 )
 camera_path = NodePath("..")
 
-[node name="tween_top" type="Tween" parent="stage/y_sort/player/camera_2d/focus_limiter"]
+[node name="sword_cooldown" type="Timer" parent="stage/y_sort/player"]
 
-[node name="tween_bottom" type="Tween" parent="stage/y_sort/player/camera_2d/focus_limiter"]
+[node name="payload" type="RigidBody2D" parent="stage/y_sort"]
+position = Vector2( 2712, -1128 )
+collision_layer = 8
+collision_mask = 15
+mode = 2
+physics_material_override = SubResource( 9 )
+linear_damp = 1.0
+script = ExtResource( 129 )
 
-[node name="tween_left" type="Tween" parent="stage/y_sort/player/camera_2d/focus_limiter"]
+[node name="collision_shape_2d" type="CollisionShape2D" parent="stage/y_sort/payload"]
+shape = SubResource( 5 )
 
-[node name="tween_right" type="Tween" parent="stage/y_sort/player/camera_2d/focus_limiter"]
+[node name="animated_sprite" type="AnimatedSprite" parent="stage/y_sort/payload"]
+scale = Vector2( 3, 3 )
+frames = SubResource( 6 )
 
-[node name="area_camera_limits" type="Area2D" parent="."]
-position = Vector2( 565.693, 324.521 )
+[node name="movement" type="Node" parent="stage/y_sort/payload"]
+script = ExtResource( 66 )
+body_path = NodePath("..")
+direction_path = NodePath("..")
+acceleration = 500.0
+default_max_speed = 100.0
+
+[node name="waypoint_aggro" type="Area2D" parent="stage/y_sort/payload"]
+visible = false
+script = ExtResource( 131 )
+raycast_path = NodePath("../waypoint_aggro_raycast")
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="stage/y_sort/payload/waypoint_aggro"]
+shape = SubResource( 8 )
+
+[node name="waypoint_aggro_raycast" type="RayCast2D" parent="stage/y_sort/payload"]
+enabled = true
+
+[node name="health_layer" type="CanvasLayer" parent="stage/y_sort/payload"]
+
+[node name="margin_container" type="MarginContainer" parent="stage/y_sort/payload/health_layer"]
+margin_right = 117.0
+margin_bottom = 111.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texture_progress" type="TextureProgress" parent="stage/y_sort/payload/health_layer/margin_container"]
+margin_right = 117.0
+margin_bottom = 111.0
+texture_over = ExtResource( 132 )
+texture_progress = ExtResource( 192 )
+fill_mode = 8
+
+[node name="animated_sprite" type="AnimatedSprite" parent="stage/y_sort/payload/health_layer/margin_container/texture_progress"]
+position = Vector2( 12, 6 )
+scale = Vector2( 3, 3 )
+z_index = -1
+frames = SubResource( 10 )
+frame = 21
+playing = true
+centered = false
+
+[node name="health_debug" type="Label" parent="stage/y_sort/payload/health_layer"]
+margin_left = 39.0
+margin_top = 102.0
+margin_right = 79.0
+margin_bottom = 116.0
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="waypoint" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 543, 717 )
+
+[node name="waypoint_2" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 1110, 726 )
+
+[node name="waypoint_3" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 1632, 729 )
+
+[node name="waypoint_4" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 2175, 732 )
+
+[node name="waypoint_5" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 2715, 735 )
+
+[node name="waypoint_6" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 3219, 981 )
+
+[node name="waypoint_7" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 3774, 930 )
+
+[node name="waypoint_8" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 4071, 558 )
+
+[node name="waypoint_9" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 4098, 57 )
+
+[node name="waypoint_10" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 3621, -204 )
+
+[node name="waypoint_11" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 3420, -255 )
+
+[node name="waypoint_12" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 3261, -1119 )
+
+[node name="waypoint_13" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 3237, -1143 )
+
+[node name="waypoint_14" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 3285, -1143 )
+
+[node name="waypoint_15" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 3309, -1167 )
+
+[node name="waypoint_16" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 3213, -1167 )
+
+[node name="waypoint_17" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 3237, -1191 )
+
+[node name="waypoint_18" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 3261, -1215 )
+
+[node name="waypoint_19" parent="stage/y_sort" instance=ExtResource( 130 )]
+position = Vector2( 3285, -1191 )
+
+[node name="goal_waypoint" parent="stage/y_sort" instance=ExtResource( 194 )]
+position = Vector2( 3261, -1167 )
+
+[node name="camera_limiters" type="Node2D" parent="stage"]
+visible = false
+
+[node name="camera_limit_area" type="Area2D" parent="stage/camera_limiters"]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource( 67 )
 
-[node name="collision_shape_2d" type="CollisionShape2D" parent="area_camera_limits"]
-shape = SubResource( 2 )
+[node name="collision_shape_2d" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_area"]
+position = Vector2( 561, 315 )
+shape = SubResource( 7 )
 
-[node name="limit_left" type="Position2D" parent="area_camera_limits"]
-position = Vector2( -560, 0 )
+[node name="collision_shape_2d2" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_area"]
+position = Vector2( 561, 945 )
+shape = SubResource( 7 )
 
-[node name="limit_top" type="Position2D" parent="area_camera_limits"]
+[node name="collision_shape_2d3" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_area"]
+position = Vector2( 561, 1575 )
+shape = SubResource( 7 )
+
+[node name="limit_left" type="Position2D" parent="stage/camera_limiters/camera_limit_area"]
+
+[node name="camera_limit_area2" type="Area2D" parent="stage/camera_limiters"]
+position = Vector2( 561, 315 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 67 )
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_area2"]
+shape = SubResource( 7 )
+
+[node name="collision_shape_2d2" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_area2"]
+position = Vector2( 1122, 0 )
+shape = SubResource( 7 )
+
+[node name="collision_shape_2d3" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_area2"]
+position = Vector2( 1743, 0 )
+shape = SubResource( 7 )
+
+[node name="limit_top" type="Position2D" parent="stage/camera_limiters/camera_limit_area2"]
 position = Vector2( 0, -315 )
+
+[node name="front_walls" type="YSort" parent="stage"]
+z_index = 2
+
+[node name="wall209" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4368, 1227 )
+
+[node name="wall208" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4332, 1227 )
+
+[node name="wall207" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4296, 1227 )
+
+[node name="wall206" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4260, 1227 )
+
+[node name="wall205" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4224, 1227 )
+
+[node name="wall204" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4188, 1227 )
+
+[node name="wall203" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4152, 1227 )
+
+[node name="wall202" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4116, 1227 )
+
+[node name="wall201" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4080, 1227 )
+
+[node name="wall200" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4044, 1227 )
+
+[node name="wall199" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4008, 1227 )
+
+[node name="wall198" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3972, 1227 )
+
+[node name="wall197" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3936, 1227 )
+
+[node name="wall196" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3900, 1227 )
+
+[node name="wall195" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3864, 1227 )
+
+[node name="wall194" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3828, 1227 )
+
+[node name="wall193" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3792, 1227 )
+
+[node name="wall220" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3756, 1227 )
+
+[node name="wall219" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3720, 1227 )
+
+[node name="wall218" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3684, 1227 )
+
+[node name="wall217" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3648, 1227 )
+
+[node name="wall216" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3612, 1227 )
+
+[node name="wall215" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3576, 1227 )
+
+[node name="wall214" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3540, 1227 )
+
+[node name="wall213" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3504, 1227 )
+
+[node name="wall212" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3468, 1227 )
+
+[node name="wall211" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3432, 1227 )
+
+[node name="wall210" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3396, 1227 )
+
+[node name="wall247" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3360, 1227 )
+
+[node name="wall246" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3324, 1227 )
+
+[node name="wall245" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3288, 1227 )
+
+[node name="wall244" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3252, 1227 )
+
+[node name="wall243" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3216, 1227 )
+
+[node name="wall242" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3180, 1227 )
+
+[node name="wall241" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3144, 1227 )
+
+[node name="wall240" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3108, 1227 )
+
+[node name="wall239" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3072, 1227 )
+
+[node name="wall238" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3036, 1227 )
+
+[node name="wall237" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 3000, 1227 )
+
+[node name="wall236" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2964, 1227 )
+
+[node name="wall235" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2928, 1227 )
+
+[node name="wall234" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2892, 1227 )
+
+[node name="wall233" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2856, 1227 )
+
+[node name="wall232" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2820, 1227 )
+
+[node name="wall231" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2784, 1227 )
+
+[node name="wall230" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2748, 1227 )
+
+[node name="wall229" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2712, 1227 )
+
+[node name="wall228" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2676, 1227 )
+
+[node name="wall227" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2640, 1227 )
+
+[node name="wall226" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2604, 1227 )
+
+[node name="wall225" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2568, 1227 )
+
+[node name="wall224" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2532, 1227 )
+
+[node name="wall223" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, 1227 )
+
+[node name="wall222" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2460, 1227 )
+
+[node name="wall221" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2424, 1227 )
+
+[node name="wall274" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2388, 1227 )
+
+[node name="wall273" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2352, 1227 )
+
+[node name="wall272" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2316, 1227 )
+
+[node name="wall271" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2280, 1227 )
+
+[node name="wall270" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2244, 1227 )
+
+[node name="wall269" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2208, 1227 )
+
+[node name="wall268" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2172, 1227 )
+
+[node name="wall267" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2136, 1227 )
+
+[node name="wall266" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2100, 1227 )
+
+[node name="wall265" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2064, 1227 )
+
+[node name="wall264" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2028, 1227 )
+
+[node name="wall263" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1992, 1227 )
+
+[node name="wall262" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1956, 1227 )
+
+[node name="wall261" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1920, 1227 )
+
+[node name="wall260" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1884, 1227 )
+
+[node name="wall259" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1848, 1227 )
+
+[node name="wall258" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1812, 1227 )
+
+[node name="wall257" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1776, 1227 )
+
+[node name="wall256" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1740, 1227 )
+
+[node name="wall255" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1704, 1227 )
+
+[node name="wall254" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1668, 1227 )
+
+[node name="wall253" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1632, 1227 )
+
+[node name="wall252" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1596, 1227 )
+
+[node name="wall251" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1560, 1227 )
+
+[node name="wall250" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1524, 1227 )
+
+[node name="wall249" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1488, 1227 )
+
+[node name="wall248" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1452, 1227 )
+
+[node name="wall314" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1416, 1227 )
+
+[node name="wall313" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1380, 1227 )
+
+[node name="wall312" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1344, 1227 )
+
+[node name="wall311" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1308, 1227 )
+
+[node name="wall310" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1272, 1227 )
+
+[node name="wall309" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1236, 1227 )
+
+[node name="wall308" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1200, 1227 )
+
+[node name="wall307" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1164, 1227 )
+
+[node name="wall306" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1128, 1227 )
+
+[node name="wall305" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1092, 1227 )
+
+[node name="wall304" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1056, 1227 )
+
+[node name="wall303" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 1020, 1227 )
+
+[node name="wall302" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 984, 1227 )
+
+[node name="wall301" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 948, 1227 )
+
+[node name="wall300" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 912, 1227 )
+
+[node name="wall299" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 876, 1227 )
+
+[node name="wall298" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 840, 1227 )
+
+[node name="wall297" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 804, 1227 )
+
+[node name="wall296" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 768, 1227 )
+
+[node name="wall295" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 732, 1227 )
+
+[node name="wall294" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 696, 1227 )
+
+[node name="wall293" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 660, 1227 )
+
+[node name="wall292" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 624, 1227 )
+
+[node name="wall291" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 588, 1227 )
+
+[node name="wall290" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 552, 1227 )
+
+[node name="wall289" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 516, 1227 )
+
+[node name="wall288" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 480, 1227 )
+
+[node name="wall287" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 444, 1227 )
+
+[node name="wall286" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 408, 1227 )
+
+[node name="wall285" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 372, 1227 )
+
+[node name="wall284" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 336, 1227 )
+
+[node name="wall283" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 300, 1227 )
+
+[node name="wall282" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 264, 1227 )
+
+[node name="wall281" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 228, 1227 )
+
+[node name="wall280" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 192, 1227 )
+
+[node name="wall279" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 156, 1227 )
+
+[node name="wall278" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 138, 1212 )
+
+[node name="wall277" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 123, 1197 )
+
+[node name="wall276" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 108, 1182 )
+
+[node name="wall275" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 1164 )
+
+[node name="wall" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 336 )
+
+[node name="wall2" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 300 )
+
+[node name="wall3" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 372 )
+
+[node name="wall6" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 444 )
+
+[node name="wall5" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 408 )
+
+[node name="wall4" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 480 )
+
+[node name="wall12" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 552 )
+
+[node name="wall11" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 516 )
+
+[node name="wall10" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 588 )
+
+[node name="wall9" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 660 )
+
+[node name="wall8" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 624 )
+
+[node name="wall7" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 696 )
+
+[node name="wall24" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 768 )
+
+[node name="wall23" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 732 )
+
+[node name="wall22" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 804 )
+
+[node name="wall21" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 876 )
+
+[node name="wall20" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 840 )
+
+[node name="wall19" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 912 )
+
+[node name="wall18" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 984 )
+
+[node name="wall17" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 948 )
+
+[node name="wall16" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 1020 )
+
+[node name="wall15" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 1092 )
+
+[node name="wall14" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 1056 )
+
+[node name="wall13" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 96, 1128 )
+
+[node name="wall48" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 417 )
+
+[node name="wall47" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 381 )
+
+[node name="wall46" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 453 )
+
+[node name="wall45" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 525 )
+
+[node name="wall44" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 489 )
+
+[node name="wall43" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 561 )
+
+[node name="wall42" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 633 )
+
+[node name="wall41" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 597 )
+
+[node name="wall40" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 669 )
+
+[node name="wall39" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 741 )
+
+[node name="wall38" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 705 )
+
+[node name="wall37" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 777 )
+
+[node name="wall36" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 849 )
+
+[node name="wall35" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 813 )
+
+[node name="wall34" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 885 )
+
+[node name="wall33" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 957 )
+
+[node name="wall32" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 921 )
+
+[node name="wall31" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 993 )
+
+[node name="wall30" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 1065 )
+
+[node name="wall29" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 1029 )
+
+[node name="wall28" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 1101 )
+
+[node name="wall27" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 1173 )
+
+[node name="wall26" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 1137 )
+
+[node name="wall25" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 1209 )
+
+[node name="wall72" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -447 )
+
+[node name="wall71" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -483 )
+
+[node name="wall70" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -411 )
+
+[node name="wall69" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -339 )
+
+[node name="wall68" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -375 )
+
+[node name="wall67" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -303 )
+
+[node name="wall66" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -231 )
+
+[node name="wall65" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -267 )
+
+[node name="wall64" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -195 )
+
+[node name="wall63" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -123 )
+
+[node name="wall62" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -159 )
+
+[node name="wall61" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -87 )
+
+[node name="wall60" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -15 )
+
+[node name="wall59" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -51 )
+
+[node name="wall58" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 21 )
+
+[node name="wall57" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 93 )
+
+[node name="wall56" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 57 )
+
+[node name="wall55" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 129 )
+
+[node name="wall54" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 201 )
+
+[node name="wall53" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 165 )
+
+[node name="wall52" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 237 )
+
+[node name="wall51" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 309 )
+
+[node name="wall50" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 273 )
+
+[node name="wall49" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, 345 )
+
+[node name="wall96" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -1311 )
+
+[node name="wall95" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -1347 )
+
+[node name="wall94" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -1275 )
+
+[node name="wall93" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -1203 )
+
+[node name="wall92" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -1239 )
+
+[node name="wall91" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -1167 )
+
+[node name="wall90" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -1095 )
+
+[node name="wall89" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -1131 )
+
+[node name="wall88" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -1059 )
+
+[node name="wall87" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -987 )
+
+[node name="wall86" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -1023 )
+
+[node name="wall85" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -951 )
+
+[node name="wall84" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -879 )
+
+[node name="wall83" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -915 )
+
+[node name="wall82" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -843 )
+
+[node name="wall81" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -771 )
+
+[node name="wall80" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -807 )
+
+[node name="wall79" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -735 )
+
+[node name="wall78" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -663 )
+
+[node name="wall77" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -699 )
+
+[node name="wall76" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -627 )
+
+[node name="wall75" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -555 )
+
+[node name="wall74" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -591 )
+
+[node name="wall159" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -1293 )
+
+[node name="wall158" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -1329 )
+
+[node name="wall157" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -1257 )
+
+[node name="wall156" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -1185 )
+
+[node name="wall148" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -1221 )
+
+[node name="wall147" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -1149 )
+
+[node name="wall146" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -1077 )
+
+[node name="wall145" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -1113 )
+
+[node name="wall144" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -1041 )
+
+[node name="wall143" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -969 )
+
+[node name="wall142" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -1005 )
+
+[node name="wall170" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -897 )
+
+[node name="wall169" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -933 )
+
+[node name="wall168" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -861 )
+
+[node name="wall167" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -789 )
+
+[node name="wall166" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -825 )
+
+[node name="wall165" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -753 )
+
+[node name="wall164" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -681 )
+
+[node name="wall163" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -717 )
+
+[node name="wall162" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -645 )
+
+[node name="wall161" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -573 )
+
+[node name="wall160" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -609 )
+
+[node name="wall181" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -501 )
+
+[node name="wall180" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -537 )
+
+[node name="wall179" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -465 )
+
+[node name="wall178" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -393 )
+
+[node name="wall177" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -429 )
+
+[node name="wall176" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -357 )
+
+[node name="wall175" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -285 )
+
+[node name="wall174" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -321 )
+
+[node name="wall173" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -249 )
+
+[node name="wall172" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -177 )
+
+[node name="wall171" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -213 )
+
+[node name="wall192" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -105 )
+
+[node name="wall191" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -141 )
+
+[node name="wall190" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -69 )
+
+[node name="wall189" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, 3 )
+
+[node name="wall188" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, -33 )
+
+[node name="wall187" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, 39 )
+
+[node name="wall186" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, 111 )
+
+[node name="wall185" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, 75 )
+
+[node name="wall184" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, 147 )
+
+[node name="wall183" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2478, 201 )
+
+[node name="wall182" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 2496, 183 )
+
+[node name="wall73" parent="stage/front_walls" instance=ExtResource( 193 )]
+position = Vector2( 4386, -519 )
+
+[node name="back_walls" type="YSort" parent="stage"]
+z_index = -2
+
+[node name="wall354" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2460, 219 )
+
+[node name="wall353" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2424, 219 )
+
+[node name="wall352" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2388, 219 )
+
+[node name="wall351" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2352, 219 )
+
+[node name="wall350" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2316, 219 )
+
+[node name="wall349" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2280, 219 )
+
+[node name="wall348" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2244, 219 )
+
+[node name="wall347" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2208, 219 )
+
+[node name="wall346" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2172, 219 )
+
+[node name="wall345" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2136, 219 )
+
+[node name="wall344" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2100, 219 )
+
+[node name="wall343" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2064, 219 )
+
+[node name="wall342" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2028, 219 )
+
+[node name="wall341" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1992, 219 )
+
+[node name="wall340" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1956, 219 )
+
+[node name="wall339" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1920, 219 )
+
+[node name="wall338" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1884, 219 )
+
+[node name="wall337" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1848, 219 )
+
+[node name="wall336" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1812, 219 )
+
+[node name="wall335" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1776, 219 )
+
+[node name="wall334" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1740, 219 )
+
+[node name="wall333" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1704, 219 )
+
+[node name="wall332" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1668, 219 )
+
+[node name="wall331" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1632, 219 )
+
+[node name="wall330" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1596, 219 )
+
+[node name="wall329" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1560, 219 )
+
+[node name="wall328" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1524, 219 )
+
+[node name="wall327" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1488, 219 )
+
+[node name="wall326" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1452, 219 )
+
+[node name="wall325" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1416, 219 )
+
+[node name="wall324" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1380, 219 )
+
+[node name="wall323" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1344, 219 )
+
+[node name="wall322" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1308, 219 )
+
+[node name="wall321" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1272, 219 )
+
+[node name="wall320" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1236, 219 )
+
+[node name="wall319" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1200, 219 )
+
+[node name="wall318" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1164, 219 )
+
+[node name="wall317" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1128, 219 )
+
+[node name="wall316" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1092, 219 )
+
+[node name="wall315" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1056, 219 )
+
+[node name="wall394" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1020, 219 )
+
+[node name="wall393" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 984, 219 )
+
+[node name="wall392" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 948, 219 )
+
+[node name="wall391" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 912, 219 )
+
+[node name="wall390" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 876, 219 )
+
+[node name="wall389" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 840, 219 )
+
+[node name="wall388" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 804, 219 )
+
+[node name="wall387" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 768, 219 )
+
+[node name="wall386" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 732, 219 )
+
+[node name="wall385" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 696, 219 )
+
+[node name="wall384" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 660, 219 )
+
+[node name="wall383" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 624, 219 )
+
+[node name="wall382" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 588, 219 )
+
+[node name="wall381" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 552, 219 )
+
+[node name="wall380" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 516, 219 )
+
+[node name="wall379" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 480, 219 )
+
+[node name="wall378" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 444, 219 )
+
+[node name="wall377" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 408, 219 )
+
+[node name="wall376" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 372, 219 )
+
+[node name="wall375" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 336, 219 )
+
+[node name="wall374" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 300, 219 )
+
+[node name="wall373" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 264, 219 )
+
+[node name="wall372" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 228, 219 )
+
+[node name="wall371" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 192, 219 )
+
+[node name="wall370" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 168, 228 )
+
+[node name="wall369" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 180, 216 )
+
+[node name="wall368" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 150, 246 )
+
+[node name="wall367" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 132, 264 )
+
+[node name="wall366" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 114, 282 )
+
+[node name="wall97" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4350, -1347 )
+
+[node name="wall98" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4314, -1347 )
+
+[node name="wall100" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4278, -1347 )
+
+[node name="wall99" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4242, -1347 )
+
+[node name="wall102" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4206, -1347 )
+
+[node name="wall101" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4170, -1347 )
+
+[node name="wall104" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4134, -1347 )
+
+[node name="wall103" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4098, -1347 )
+
+[node name="wall106" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4062, -1347 )
+
+[node name="wall105" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4026, -1347 )
+
+[node name="wall113" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3990, -1347 )
+
+[node name="wall112" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3954, -1347 )
+
+[node name="wall111" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3918, -1347 )
+
+[node name="wall110" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3882, -1347 )
+
+[node name="wall109" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3846, -1347 )
+
+[node name="wall108" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3810, -1347 )
+
+[node name="wall107" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3774, -1347 )
+
+[node name="wall127" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3738, -1347 )
+
+[node name="wall126" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3702, -1347 )
+
+[node name="wall125" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3666, -1347 )
+
+[node name="wall124" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3630, -1347 )
+
+[node name="wall123" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3594, -1347 )
+
+[node name="wall122" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3558, -1347 )
+
+[node name="wall121" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3522, -1347 )
+
+[node name="wall120" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3486, -1347 )
+
+[node name="wall119" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3450, -1347 )
+
+[node name="wall118" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3414, -1347 )
+
+[node name="wall117" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3378, -1347 )
+
+[node name="wall116" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3342, -1347 )
+
+[node name="wall115" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3306, -1347 )
+
+[node name="wall114" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3270, -1347 )
+
+[node name="wall141" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3234, -1347 )
+
+[node name="wall140" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3198, -1347 )
+
+[node name="wall139" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3162, -1347 )
+
+[node name="wall138" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3126, -1347 )
+
+[node name="wall137" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3090, -1347 )
+
+[node name="wall136" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3054, -1347 )
+
+[node name="wall135" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3018, -1347 )
+
+[node name="wall134" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2982, -1347 )
+
+[node name="wall133" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2946, -1347 )
+
+[node name="wall132" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2910, -1347 )
+
+[node name="wall131" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2874, -1347 )
+
+[node name="wall130" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2838, -1347 )
+
+[node name="wall129" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2802, -1347 )
+
+[node name="wall128" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2766, -1347 )
+
+[node name="wall155" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2730, -1347 )
+
+[node name="wall154" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2694, -1347 )
+
+[node name="wall153" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2658, -1347 )
+
+[node name="wall152" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2622, -1347 )
+
+[node name="wall151" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2586, -1347 )
+
+[node name="wall150" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2550, -1347 )
+
+[node name="wall149" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2514, -1347 )
+[connection signal="aggro" from="stage/y_sort/payload/waypoint_aggro" to="stage/y_sort/payload" method="_on_waypoint_aggro_aggro"]

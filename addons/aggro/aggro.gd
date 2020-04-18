@@ -7,7 +7,7 @@ extends Area2D
 #   I think you can have scenery and aggroing things on the same layer, but I've not tested it
 # don't forget to add triggers_aggro() to bodies you want to trigger aggro
 # don't forget to add a shape for the aggro and set the raycast path
-
+# don't forget to enable the raycast
 
 signal aggro(entity)
 signal aggro_lost(entity)
