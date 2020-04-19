@@ -1,0 +1,109 @@
+[gd_scene load_steps=65 format=2]
+
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_22.png" type="Texture" id=1]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_04.png" type="Texture" id=2]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_38.png" type="Texture" id=3]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_08.png" type="Texture" id=4]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_47.png" type="Texture" id=5]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_12.png" type="Texture" id=6]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_09.png" type="Texture" id=7]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_42.png" type="Texture" id=8]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_21.png" type="Texture" id=9]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_24.png" type="Texture" id=10]
+[ext_resource path="res://external/aseprite/heart_of_gold_00.png" type="Texture" id=11]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_54.png" type="Texture" id=12]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_45.png" type="Texture" id=13]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_59.png" type="Texture" id=14]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_50.png" type="Texture" id=15]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_28.png" type="Texture" id=16]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_16.png" type="Texture" id=17]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_56.png" type="Texture" id=18]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_34.png" type="Texture" id=19]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_19.png" type="Texture" id=20]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_31.png" type="Texture" id=21]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_52.png" type="Texture" id=22]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_10.png" type="Texture" id=23]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_05.png" type="Texture" id=24]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_01.png" type="Texture" id=25]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_39.png" type="Texture" id=26]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_58.png" type="Texture" id=27]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_07.png" type="Texture" id=28]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_15.png" type="Texture" id=29]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_48.png" type="Texture" id=30]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_55.png" type="Texture" id=31]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_44.png" type="Texture" id=32]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_02.png" type="Texture" id=33]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_03.png" type="Texture" id=34]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_49.png" type="Texture" id=35]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_35.png" type="Texture" id=36]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_20.png" type="Texture" id=37]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_36.png" type="Texture" id=38]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_27.png" type="Texture" id=39]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_32.png" type="Texture" id=40]
+[ext_resource path="res://external/aseprite/heart_of_gold_01.png" type="Texture" id=41]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_46.png" type="Texture" id=42]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_14.png" type="Texture" id=43]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_26.png" type="Texture" id=44]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_33.png" type="Texture" id=45]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_51.png" type="Texture" id=46]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_13.png" type="Texture" id=47]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_06.png" type="Texture" id=48]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_17.png" type="Texture" id=49]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_37.png" type="Texture" id=50]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_41.png" type="Texture" id=51]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_57.png" type="Texture" id=52]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_25.png" type="Texture" id=53]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_18.png" type="Texture" id=54]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_43.png" type="Texture" id=55]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_30.png" type="Texture" id=56]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_53.png" type="Texture" id=57]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_00.png" type="Texture" id=58]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_23.png" type="Texture" id=59]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_40.png" type="Texture" id=60]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_11.png" type="Texture" id=61]
+[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_29.png" type="Texture" id=62]
+[ext_resource path="res://health_layer.gd" type="Script" id=63]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 58 ), ExtResource( 25 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 2 ), ExtResource( 24 ), ExtResource( 48 ), ExtResource( 28 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 23 ), ExtResource( 61 ), ExtResource( 6 ), ExtResource( 47 ), ExtResource( 43 ), ExtResource( 29 ), ExtResource( 17 ), ExtResource( 49 ), ExtResource( 54 ), ExtResource( 20 ), ExtResource( 37 ), ExtResource( 9 ), ExtResource( 1 ), ExtResource( 59 ), ExtResource( 10 ), ExtResource( 53 ), ExtResource( 44 ), ExtResource( 39 ), ExtResource( 16 ), ExtResource( 62 ), ExtResource( 56 ), ExtResource( 21 ), ExtResource( 40 ), ExtResource( 45 ), ExtResource( 19 ), ExtResource( 36 ), ExtResource( 38 ), ExtResource( 50 ), ExtResource( 3 ), ExtResource( 26 ), ExtResource( 60 ), ExtResource( 51 ), ExtResource( 8 ), ExtResource( 55 ), ExtResource( 32 ), ExtResource( 13 ), ExtResource( 42 ), ExtResource( 5 ), ExtResource( 30 ), ExtResource( 35 ), ExtResource( 15 ), ExtResource( 46 ), ExtResource( 22 ), ExtResource( 57 ), ExtResource( 12 ), ExtResource( 31 ), ExtResource( 18 ), ExtResource( 52 ), ExtResource( 27 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+} ]
+
+[node name="health_layer" type="CanvasLayer"]
+script = ExtResource( 63 )
+
+[node name="margin_container" type="MarginContainer" parent="."]
+margin_right = 117.0
+margin_bottom = 111.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texture_progress" type="TextureProgress" parent="margin_container"]
+margin_right = 117.0
+margin_bottom = 111.0
+texture_over = ExtResource( 11 )
+texture_progress = ExtResource( 41 )
+fill_mode = 8
+
+[node name="animated_sprite" type="AnimatedSprite" parent="margin_container/texture_progress"]
+position = Vector2( 12, -3 )
+scale = Vector2( 3, 3 )
+z_index = -1
+frames = SubResource( 1 )
+frame = 46
+playing = true
+centered = false
+
+[node name="health_debug" type="Label" parent="."]
+margin_left = 39.0
+margin_top = 102.0
+margin_right = 79.0
+margin_bottom = 116.0
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

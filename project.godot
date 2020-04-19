@@ -19,6 +19,10 @@ config/name="LDJAM 46 | ??? | markopolodev"
 run/main_scene="res://game.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+global="*res://global.gd"
+
 [debug]
 
 gdscript/warnings/return_value_discarded=false
@@ -27,6 +31,7 @@ gdscript/warnings/return_value_discarded=false
 
 window/size/width=1119
 window/size/height=630
+mouse_cursor/custom_image="res://external/aseprite/cursor.png"
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
@@ -55,6 +60,16 @@ texture={
 "size_limit": 0,
 "stream": false,
 "svg/scale": 1.0
+}
+wav={
+"compress/mode": 0,
+"edit/loop": false,
+"edit/normalize": true,
+"edit/trim": true,
+"force/8_bit": false,
+"force/max_rate": false,
+"force/max_rate_hz": 44100,
+"force/mono": false
 }
 
 [input]

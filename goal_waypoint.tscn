@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://waypoint.tscn" type="PackedScene" id=1]
-[ext_resource path="res://external/aseprite/wall_00.png" type="Texture" id=2]
+[ext_resource path="res://external/aseprite/wall_02.png" type="Texture" id=2]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

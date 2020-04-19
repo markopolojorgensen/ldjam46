@@ -1,111 +1,175 @@
-[gd_scene load_steps=70 format=2]
+[gd_scene load_steps=131 format=2]
 
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_04.png" type="Texture" id=1]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_21.png" type="Texture" id=2]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_22.png" type="Texture" id=3]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_15.png" type="Texture" id=4]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_06.png" type="Texture" id=5]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_01.png" type="Texture" id=6]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_03.png" type="Texture" id=7]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_12.png" type="Texture" id=8]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_08.png" type="Texture" id=9]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_07.png" type="Texture" id=10]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_20.png" type="Texture" id=11]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_09.png" type="Texture" id=12]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_51.png" type="Texture" id=13]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_52.png" type="Texture" id=14]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_53.png" type="Texture" id=15]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_54.png" type="Texture" id=16]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_44.png" type="Texture" id=17]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_43.png" type="Texture" id=18]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_45.png" type="Texture" id=19]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_46.png" type="Texture" id=20]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_47.png" type="Texture" id=21]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_48.png" type="Texture" id=22]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_36.png" type="Texture" id=23]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_37.png" type="Texture" id=24]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_10.png" type="Texture" id=25]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_11.png" type="Texture" id=26]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_29.png" type="Texture" id=27]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_18.png" type="Texture" id=28]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_05.png" type="Texture" id=29]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_26.png" type="Texture" id=30]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_42.png" type="Texture" id=31]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_31.png" type="Texture" id=32]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_49.png" type="Texture" id=33]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_50.png" type="Texture" id=34]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_55.png" type="Texture" id=35]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_56.png" type="Texture" id=36]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_57.png" type="Texture" id=37]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_58.png" type="Texture" id=38]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_59.png" type="Texture" id=39]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_25.png" type="Texture" id=40]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_30.png" type="Texture" id=41]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_14.png" type="Texture" id=42]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_34.png" type="Texture" id=43]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_23.png" type="Texture" id=44]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_24.png" type="Texture" id=45]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_38.png" type="Texture" id=46]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_39.png" type="Texture" id=47]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_32.png" type="Texture" id=48]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_33.png" type="Texture" id=49]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_13.png" type="Texture" id=50]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_16.png" type="Texture" id=51]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_17.png" type="Texture" id=52]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_28.png" type="Texture" id=53]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_27.png" type="Texture" id=54]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_40.png" type="Texture" id=55]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_41.png" type="Texture" id=56]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_19.png" type="Texture" id=57]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_35.png" type="Texture" id=58]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_00.png" type="Texture" id=59]
-[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames/small_red_enemy_02.png" type="Texture" id=60]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_12.png" type="Texture" id=1]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_10.png" type="Texture" id=2]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_76.png" type="Texture" id=3]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_94.png" type="Texture" id=4]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_21.png" type="Texture" id=5]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_63.png" type="Texture" id=6]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_52.png" type="Texture" id=7]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_66.png" type="Texture" id=8]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_06.png" type="Texture" id=9]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_17.png" type="Texture" id=10]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_38.png" type="Texture" id=11]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_16.png" type="Texture" id=12]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_81.png" type="Texture" id=13]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_96.png" type="Texture" id=14]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_26.png" type="Texture" id=15]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_57.png" type="Texture" id=16]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_43.png" type="Texture" id=17]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_79.png" type="Texture" id=18]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_29.png" type="Texture" id=19]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_23.png" type="Texture" id=20]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_34.png" type="Texture" id=21]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_115.png" type="Texture" id=22]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_75.png" type="Texture" id=23]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_01.png" type="Texture" id=24]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_19.png" type="Texture" id=25]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_35.png" type="Texture" id=26]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_102.png" type="Texture" id=27]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_31.png" type="Texture" id=28]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_24.png" type="Texture" id=29]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_73.png" type="Texture" id=30]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_116.png" type="Texture" id=31]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_11.png" type="Texture" id=32]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_60.png" type="Texture" id=33]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_27.png" type="Texture" id=34]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_83.png" type="Texture" id=35]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_51.png" type="Texture" id=36]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_37.png" type="Texture" id=37]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_13.png" type="Texture" id=38]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_05.png" type="Texture" id=39]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_03.png" type="Texture" id=40]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_04.png" type="Texture" id=41]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_86.png" type="Texture" id=42]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_14.png" type="Texture" id=43]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_39.png" type="Texture" id=44]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_36.png" type="Texture" id=45]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_119.png" type="Texture" id=46]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_90.png" type="Texture" id=47]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_00.png" type="Texture" id=48]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_77.png" type="Texture" id=49]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_50.png" type="Texture" id=50]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_08.png" type="Texture" id=51]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_71.png" type="Texture" id=52]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_88.png" type="Texture" id=53]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_54.png" type="Texture" id=54]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_108.png" type="Texture" id=55]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_40.png" type="Texture" id=56]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_107.png" type="Texture" id=57]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_78.png" type="Texture" id=58]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_89.png" type="Texture" id=59]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_56.png" type="Texture" id=60]
 [ext_resource path="res://enemy/small_red_enemy.gd" type="Script" id=61]
 [ext_resource path="res://addons/aggro/aggro.gd" type="Script" id=62]
 [ext_resource path="res://addons/movement/top_down_movement.gd" type="Script" id=63]
 [ext_resource path="res://external/aseprite/enemy_health_ui_00.png" type="Texture" id=64]
 [ext_resource path="res://external/aseprite/enemy_health_ui_01.png" type="Texture" id=65]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_69.png" type="Texture" id=66]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_70.png" type="Texture" id=67]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_59.png" type="Texture" id=68]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_41.png" type="Texture" id=69]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_91.png" type="Texture" id=70]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_109.png" type="Texture" id=71]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_99.png" type="Texture" id=72]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_67.png" type="Texture" id=73]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_65.png" type="Texture" id=74]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_112.png" type="Texture" id=75]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_02.png" type="Texture" id=76]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_114.png" type="Texture" id=77]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_22.png" type="Texture" id=78]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_74.png" type="Texture" id=79]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_85.png" type="Texture" id=80]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_80.png" type="Texture" id=81]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_118.png" type="Texture" id=82]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_62.png" type="Texture" id=83]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_25.png" type="Texture" id=84]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_15.png" type="Texture" id=85]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_72.png" type="Texture" id=86]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_84.png" type="Texture" id=87]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_09.png" type="Texture" id=88]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_53.png" type="Texture" id=89]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_61.png" type="Texture" id=90]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_07.png" type="Texture" id=91]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_92.png" type="Texture" id=92]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_113.png" type="Texture" id=93]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_117.png" type="Texture" id=94]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_106.png" type="Texture" id=95]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_45.png" type="Texture" id=96]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_103.png" type="Texture" id=97]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_48.png" type="Texture" id=98]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_68.png" type="Texture" id=99]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_105.png" type="Texture" id=100]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_82.png" type="Texture" id=101]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_18.png" type="Texture" id=102]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_93.png" type="Texture" id=103]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_28.png" type="Texture" id=104]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_101.png" type="Texture" id=105]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_64.png" type="Texture" id=106]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_20.png" type="Texture" id=107]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_110.png" type="Texture" id=108]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_47.png" type="Texture" id=109]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_98.png" type="Texture" id=110]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_97.png" type="Texture" id=111]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_46.png" type="Texture" id=112]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_111.png" type="Texture" id=113]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_58.png" type="Texture" id=114]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_49.png" type="Texture" id=115]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_30.png" type="Texture" id=116]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_100.png" type="Texture" id=117]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_33.png" type="Texture" id=118]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_104.png" type="Texture" id=119]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_95.png" type="Texture" id=120]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_87.png" type="Texture" id=121]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_55.png" type="Texture" id=122]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_32.png" type="Texture" id=123]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_44.png" type="Texture" id=124]
+[ext_resource path="res://external/pfxd/small_red_enemy/aseprite_frames_b/small_enemy_42.png" type="Texture" id=125]
+[ext_resource path="res://external/sunvox/ouch.wav" type="AudioStream" id=126]
 
-[sub_resource type="PhysicsMaterial" id=4]
+[sub_resource type="PhysicsMaterial" id=5]
 friction = 0.0
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=6]
 radius = 21.0
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=7]
 animations = [ {
-"frames": [ ExtResource( 59 ), ExtResource( 6 ), ExtResource( 60 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 29 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 8 ), ExtResource( 50 ), ExtResource( 42 ), ExtResource( 4 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 28 ), ExtResource( 57 ), ExtResource( 11 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 40 ), ExtResource( 30 ), ExtResource( 54 ), ExtResource( 53 ), ExtResource( 27 ), ExtResource( 41 ), ExtResource( 32 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 43 ), ExtResource( 58 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 31 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ) ],
+"frames": [ ExtResource( 48 ), ExtResource( 24 ), ExtResource( 76 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 39 ), ExtResource( 9 ), ExtResource( 91 ), ExtResource( 51 ), ExtResource( 88 ), ExtResource( 2 ), ExtResource( 32 ), ExtResource( 1 ), ExtResource( 38 ), ExtResource( 43 ), ExtResource( 85 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 102 ), ExtResource( 25 ), ExtResource( 107 ), ExtResource( 5 ), ExtResource( 78 ), ExtResource( 20 ), ExtResource( 29 ), ExtResource( 84 ), ExtResource( 15 ), ExtResource( 34 ), ExtResource( 104 ), ExtResource( 19 ), ExtResource( 116 ), ExtResource( 28 ), ExtResource( 123 ), ExtResource( 118 ), ExtResource( 21 ), ExtResource( 26 ), ExtResource( 45 ), ExtResource( 37 ), ExtResource( 11 ), ExtResource( 44 ), ExtResource( 56 ), ExtResource( 69 ), ExtResource( 125 ), ExtResource( 17 ), ExtResource( 124 ), ExtResource( 96 ), ExtResource( 112 ), ExtResource( 109 ), ExtResource( 98 ), ExtResource( 115 ), ExtResource( 50 ), ExtResource( 36 ), ExtResource( 7 ), ExtResource( 89 ), ExtResource( 54 ), ExtResource( 122 ), ExtResource( 60 ), ExtResource( 16 ), ExtResource( 114 ), ExtResource( 68 ), ExtResource( 33 ), ExtResource( 90 ), ExtResource( 83 ), ExtResource( 6 ), ExtResource( 106 ), ExtResource( 74 ), ExtResource( 8 ), ExtResource( 73 ), ExtResource( 99 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 52 ), ExtResource( 86 ), ExtResource( 30 ), ExtResource( 79 ), ExtResource( 23 ), ExtResource( 3 ), ExtResource( 49 ), ExtResource( 58 ), ExtResource( 18 ), ExtResource( 81 ), ExtResource( 13 ), ExtResource( 101 ), ExtResource( 35 ), ExtResource( 87 ), ExtResource( 80 ), ExtResource( 42 ), ExtResource( 121 ), ExtResource( 53 ), ExtResource( 59 ), ExtResource( 47 ), ExtResource( 70 ), ExtResource( 92 ), ExtResource( 103 ), ExtResource( 4 ), ExtResource( 120 ), ExtResource( 14 ), ExtResource( 111 ), ExtResource( 110 ), ExtResource( 72 ), ExtResource( 117 ), ExtResource( 105 ), ExtResource( 27 ), ExtResource( 97 ), ExtResource( 119 ), ExtResource( 100 ), ExtResource( 95 ), ExtResource( 57 ), ExtResource( 55 ), ExtResource( 71 ), ExtResource( 108 ), ExtResource( 113 ), ExtResource( 75 ), ExtResource( 93 ), ExtResource( 77 ), ExtResource( 22 ), ExtResource( 31 ), ExtResource( 94 ), ExtResource( 82 ), ExtResource( 46 ) ],
 "loop": true,
 "name": "default",
 "speed": 60.0
 } ]
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=4]
 radius = 600.0
 
 [node name="small_red_enemy" type="RigidBody2D"]
 collision_layer = 4
 collision_mask = 15
 mode = 2
-physics_material_override = SubResource( 4 )
+physics_material_override = SubResource( 5 )
+linear_damp = 5.0
 script = ExtResource( 61 )
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+position = Vector2( 0, -9 )
+shape = SubResource( 6 )
 
 [node name="animated_sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -9 )
 scale = Vector2( 3, 3 )
-frames = SubResource( 2 )
+frames = SubResource( 7 )
 
 [node name="aggro" type="Area2D" parent="."]
 visible = false
 collision_layer = 0
-collision_mask = 8
+collision_mask = 10
 script = ExtResource( 62 )
 raycast_path = NodePath("../aggro_raycast")
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="aggro"]
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="aggro_raycast" type="RayCast2D" parent="."]
 enabled = true
@@ -116,7 +180,7 @@ script = ExtResource( 63 )
 body_path = NodePath("..")
 direction_path = NodePath("..")
 acceleration = 600.0
-default_max_speed = 300.0
+default_max_speed = 1000.0
 
 [node name="health_hud" type="TextureProgress" parent="."]
 visible = false
@@ -134,5 +198,10 @@ __meta__ = {
 
 [node name="attack_cooldown" type="Timer" parent="."]
 one_shot = true
+
+[node name="ouch" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 126 )
+max_distance = 500.0
+attenuation = 5.0
 [connection signal="aggro" from="aggro" to="." method="_on_aggro_aggro"]
 [connection signal="aggro_lost" from="aggro" to="." method="_on_aggro_aggro_lost"]

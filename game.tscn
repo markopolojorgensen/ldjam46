@@ -1,7 +1,7 @@
-[gd_scene load_steps=205 format=2]
+[gd_scene load_steps=98 format=2]
 
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_14.png" type="Texture" id=1]
-[ext_resource path="res://enemy/small_red_enemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://start_button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://enemy_position.tscn" type="PackedScene" id=2]
 [ext_resource path="res://external/pfxd/player/aseprite_frames/player_30.png" type="Texture" id=3]
 [ext_resource path="res://external/pfxd/player/aseprite_frames/player_27.png" type="Texture" id=4]
 [ext_resource path="res://external/pfxd/player/aseprite_frames/player_03.png" type="Texture" id=5]
@@ -69,129 +69,26 @@
 [ext_resource path="res://addons/camera_limiter/camera_limiting_area.gd" type="Script" id=67]
 [ext_resource path="res://addons/movement/user_input_direction.gd" type="Script" id=68]
 [ext_resource path="res://external/aseprite/tiles.png" type="Texture" id=69]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_03.png" type="Texture" id=70]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_00.png" type="Texture" id=71]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_18.png" type="Texture" id=72]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_04.png" type="Texture" id=73]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_26.png" type="Texture" id=74]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_51.png" type="Texture" id=75]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_53.png" type="Texture" id=76]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_52.png" type="Texture" id=77]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_25.png" type="Texture" id=78]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_15.png" type="Texture" id=79]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_11.png" type="Texture" id=80]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_13.png" type="Texture" id=81]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_36.png" type="Texture" id=82]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_45.png" type="Texture" id=83]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_02.png" type="Texture" id=84]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_06.png" type="Texture" id=85]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_37.png" type="Texture" id=86]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_16.png" type="Texture" id=87]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_08.png" type="Texture" id=88]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_01.png" type="Texture" id=89]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_21.png" type="Texture" id=90]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_30.png" type="Texture" id=91]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_07.png" type="Texture" id=92]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_24.png" type="Texture" id=93]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_35.png" type="Texture" id=94]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_34.png" type="Texture" id=95]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_42.png" type="Texture" id=96]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_10.png" type="Texture" id=97]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_09.png" type="Texture" id=98]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_17.png" type="Texture" id=99]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_05.png" type="Texture" id=100]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_44.png" type="Texture" id=101]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_46.png" type="Texture" id=102]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_23.png" type="Texture" id=103]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_27.png" type="Texture" id=104]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_59.png" type="Texture" id=105]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_54.png" type="Texture" id=106]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_47.png" type="Texture" id=107]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_50.png" type="Texture" id=108]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_49.png" type="Texture" id=109]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_48.png" type="Texture" id=110]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_32.png" type="Texture" id=111]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_12.png" type="Texture" id=112]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_38.png" type="Texture" id=113]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_43.png" type="Texture" id=114]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_31.png" type="Texture" id=115]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_29.png" type="Texture" id=116]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_28.png" type="Texture" id=117]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_55.png" type="Texture" id=118]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_33.png" type="Texture" id=119]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_41.png" type="Texture" id=120]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_40.png" type="Texture" id=121]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_22.png" type="Texture" id=122]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_57.png" type="Texture" id=123]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_56.png" type="Texture" id=124]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_58.png" type="Texture" id=125]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_20.png" type="Texture" id=126]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_19.png" type="Texture" id=127]
-[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_39.png" type="Texture" id=128]
-[ext_resource path="res://payload.gd" type="Script" id=129]
+[ext_resource path="res://stage.gd" type="Script" id=70]
+[ext_resource path="res://external/aseprite/nine_patch_red.png" type="Texture" id=71]
+[ext_resource path="res://indicator_arrow.gd" type="Script" id=72]
+[ext_resource path="res://external/aseprite/indicator_arrow/frames/indicator_arrow_02.png" type="Texture" id=73]
+[ext_resource path="res://external/aseprite/indicator_arrow/frames/indicator_arrow_05.png" type="Texture" id=74]
+[ext_resource path="res://external/aseprite/indicator_arrow/frames/indicator_arrow_03.png" type="Texture" id=75]
+[ext_resource path="res://external/aseprite/indicator_arrow/frames/indicator_arrow_04.png" type="Texture" id=76]
+[ext_resource path="res://external/aseprite/indicator_arrow/frames/indicator_arrow_01.png" type="Texture" id=77]
+[ext_resource path="res://external/aseprite/indicator_arrow/frames/indicator_arrow_06.png" type="Texture" id=78]
+[ext_resource path="res://external/aseprite/indicator_arrow/frames/indicator_arrow_00.png" type="Texture" id=79]
+[ext_resource path="res://external/aseprite/indicator_arrow/frames/indicator_arrow_08.png" type="Texture" id=80]
+[ext_resource path="res://external/aseprite/indicator_arrow/frames/indicator_arrow_07.png" type="Texture" id=81]
+[ext_resource path="res://external/aseprite/indicator_arrow/frames/indicator_arrow_09.png" type="Texture" id=82]
+[ext_resource path="res://external/aseprite/indicator_arrow/frames/indicator_arrow_11.png" type="Texture" id=83]
+[ext_resource path="res://external/aseprite/indicator_arrow/frames/indicator_arrow_10.png" type="Texture" id=84]
+[ext_resource path="res://health_layer.tscn" type="PackedScene" id=85]
+[ext_resource path="res://external/spooky cronch.ogg" type="AudioStream" id=86]
+[ext_resource path="res://external/sunvox/wind.ogg" type="AudioStream" id=87]
+[ext_resource path="res://external/sunvox/ouch.wav" type="AudioStream" id=88]
 [ext_resource path="res://waypoint.tscn" type="PackedScene" id=130]
-[ext_resource path="res://addons/aggro/aggro.gd" type="Script" id=131]
-[ext_resource path="res://external/aseprite/heart_of_gold_00.png" type="Texture" id=132]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_03.png" type="Texture" id=133]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_26.png" type="Texture" id=134]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_37.png" type="Texture" id=135]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_30.png" type="Texture" id=136]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_45.png" type="Texture" id=137]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_24.png" type="Texture" id=138]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_07.png" type="Texture" id=139]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_19.png" type="Texture" id=140]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_56.png" type="Texture" id=141]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_16.png" type="Texture" id=142]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_33.png" type="Texture" id=143]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_27.png" type="Texture" id=144]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_15.png" type="Texture" id=145]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_52.png" type="Texture" id=146]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_11.png" type="Texture" id=147]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_23.png" type="Texture" id=148]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_05.png" type="Texture" id=149]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_10.png" type="Texture" id=150]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_43.png" type="Texture" id=151]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_42.png" type="Texture" id=152]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_01.png" type="Texture" id=153]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_17.png" type="Texture" id=154]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_04.png" type="Texture" id=155]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_50.png" type="Texture" id=156]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_40.png" type="Texture" id=157]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_18.png" type="Texture" id=158]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_47.png" type="Texture" id=159]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_22.png" type="Texture" id=160]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_21.png" type="Texture" id=161]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_08.png" type="Texture" id=162]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_48.png" type="Texture" id=163]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_39.png" type="Texture" id=164]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_38.png" type="Texture" id=165]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_53.png" type="Texture" id=166]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_49.png" type="Texture" id=167]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_00.png" type="Texture" id=168]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_35.png" type="Texture" id=169]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_29.png" type="Texture" id=170]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_12.png" type="Texture" id=171]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_36.png" type="Texture" id=172]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_31.png" type="Texture" id=173]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_51.png" type="Texture" id=174]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_20.png" type="Texture" id=175]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_41.png" type="Texture" id=176]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_44.png" type="Texture" id=177]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_32.png" type="Texture" id=178]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_13.png" type="Texture" id=179]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_06.png" type="Texture" id=180]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_34.png" type="Texture" id=181]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_28.png" type="Texture" id=182]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_46.png" type="Texture" id=183]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_55.png" type="Texture" id=184]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_54.png" type="Texture" id=185]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_09.png" type="Texture" id=186]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_58.png" type="Texture" id=187]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_57.png" type="Texture" id=188]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_14.png" type="Texture" id=189]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_02.png" type="Texture" id=190]
-[ext_resource path="res://external/pfxd/heartbeat/aseprite_frames/heartbeat_25.png" type="Texture" id=191]
-[ext_resource path="res://external/aseprite/heart_of_gold_01.png" type="Texture" id=192]
 [ext_resource path="res://wall.tscn" type="PackedScene" id=193]
 [ext_resource path="res://goal_waypoint.tscn" type="PackedScene" id=194]
 
@@ -251,37 +148,22 @@ animations = [ {
 "speed": 60.0
 } ]
 
-[sub_resource type="PhysicsMaterial" id=9]
-
-[sub_resource type="CircleShape2D" id=5]
-radius = 45.0
-
-[sub_resource type="SpriteFrames" id=6]
-animations = [ {
-"frames": [ ExtResource( 71 ), ExtResource( 89 ), ExtResource( 84 ), ExtResource( 70 ), ExtResource( 73 ), ExtResource( 100 ), ExtResource( 85 ), ExtResource( 92 ), ExtResource( 88 ), ExtResource( 98 ), ExtResource( 97 ), ExtResource( 80 ), ExtResource( 112 ), ExtResource( 81 ), ExtResource( 1 ), ExtResource( 79 ), ExtResource( 87 ), ExtResource( 99 ), ExtResource( 72 ), ExtResource( 127 ), ExtResource( 126 ), ExtResource( 90 ), ExtResource( 122 ), ExtResource( 103 ), ExtResource( 93 ), ExtResource( 78 ), ExtResource( 74 ), ExtResource( 104 ), ExtResource( 117 ), ExtResource( 116 ), ExtResource( 91 ), ExtResource( 115 ), ExtResource( 111 ), ExtResource( 119 ), ExtResource( 95 ), ExtResource( 94 ), ExtResource( 82 ), ExtResource( 86 ), ExtResource( 113 ), ExtResource( 128 ), ExtResource( 121 ), ExtResource( 120 ), ExtResource( 96 ), ExtResource( 114 ), ExtResource( 101 ), ExtResource( 83 ), ExtResource( 102 ), ExtResource( 107 ), ExtResource( 110 ), ExtResource( 109 ), ExtResource( 108 ), ExtResource( 75 ), ExtResource( 77 ), ExtResource( 76 ), ExtResource( 106 ), ExtResource( 118 ), ExtResource( 124 ), ExtResource( 123 ), ExtResource( 125 ), ExtResource( 105 ) ],
-"loop": true,
-"name": "default",
-"speed": 60.0
-} ]
-
-[sub_resource type="CircleShape2D" id=8]
-radius = 700.0
-
-[sub_resource type="SpriteFrames" id=10]
-animations = [ {
-"frames": [ ExtResource( 168 ), ExtResource( 153 ), ExtResource( 190 ), ExtResource( 133 ), ExtResource( 155 ), ExtResource( 149 ), ExtResource( 180 ), ExtResource( 139 ), ExtResource( 162 ), ExtResource( 186 ), ExtResource( 150 ), ExtResource( 147 ), ExtResource( 171 ), ExtResource( 179 ), ExtResource( 189 ), ExtResource( 145 ), ExtResource( 142 ), ExtResource( 154 ), ExtResource( 158 ), ExtResource( 140 ), ExtResource( 175 ), ExtResource( 161 ), ExtResource( 160 ), ExtResource( 148 ), ExtResource( 138 ), ExtResource( 191 ), ExtResource( 134 ), ExtResource( 144 ), ExtResource( 182 ), ExtResource( 170 ), ExtResource( 136 ), ExtResource( 173 ), ExtResource( 178 ), ExtResource( 143 ), ExtResource( 181 ), ExtResource( 169 ), ExtResource( 172 ), ExtResource( 135 ), ExtResource( 165 ), ExtResource( 164 ), ExtResource( 157 ), ExtResource( 176 ), ExtResource( 152 ), ExtResource( 151 ), ExtResource( 177 ), ExtResource( 137 ), ExtResource( 183 ), ExtResource( 159 ), ExtResource( 163 ), ExtResource( 167 ), ExtResource( 156 ), ExtResource( 174 ), ExtResource( 146 ), ExtResource( 166 ), ExtResource( 185 ), ExtResource( 184 ), ExtResource( 141 ), ExtResource( 188 ), ExtResource( 187 ) ],
-"loop": true,
-"name": "default",
-"speed": 30.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 561, 315 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ ExtResource( 79 ), ExtResource( 77 ), ExtResource( 73 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 74 ), ExtResource( 78 ), ExtResource( 81 ), ExtResource( 80 ), ExtResource( 82 ), ExtResource( 84 ), ExtResource( 83 ), ExtResource( 79 ), ExtResource( 79 ), ExtResource( 79 ), ExtResource( 79 ), ExtResource( 79 ), ExtResource( 79 ), ExtResource( 79 ), ExtResource( 79 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+} ]
 
 [node name="game" type="Node2D"]
 script = ExtResource( 64 )
 
 [node name="stage" type="Node2D" parent="."]
+script = ExtResource( 70 )
 
 [node name="ground" type="TileMap" parent="stage"]
 scale = Vector2( 3, 3 )
@@ -289,24 +171,12 @@ z_index = -50
 tile_set = SubResource( 1 )
 cell_size = Vector2( 256, 256 )
 format = 1
-tile_data = PoolIntArray( -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0 )
+tile_data = PoolIntArray( -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0 )
 
 [node name="y_sort" type="YSort" parent="stage"]
 
-[node name="small_red_enemy" parent="stage/y_sort" instance=ExtResource( 2 )]
-position = Vector2( 923.933, 453 )
-
-[node name="small_red_enemy2" parent="stage/y_sort" instance=ExtResource( 2 )]
-position = Vector2( 978, 488.242 )
-
-[node name="small_red_enemy3" parent="stage/y_sort" instance=ExtResource( 2 )]
-position = Vector2( 807, 467.242 )
-
-[node name="small_red_enemy4" parent="stage/y_sort" instance=ExtResource( 2 )]
-position = Vector2( 717, 515.242 )
-
 [node name="player" type="RigidBody2D" parent="stage/y_sort"]
-position = Vector2( 2868, -942 )
+position = Vector2( 2766.9, -999.286 )
 collision_layer = 2
 collision_mask = 13
 mode = 2
@@ -327,6 +197,7 @@ script = ExtResource( 68 )
 shape = SubResource( 3 )
 
 [node name="animated_sprite" type="AnimatedSprite" parent="stage/y_sort/player"]
+position = Vector2( 0, -3 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 4 )
 
@@ -340,75 +211,19 @@ script = ExtResource( 65 )
 camera_path = NodePath("..")
 
 [node name="sword_cooldown" type="Timer" parent="stage/y_sort/player"]
+wait_time = 0.25
+one_shot = true
 
-[node name="payload" type="RigidBody2D" parent="stage/y_sort"]
-position = Vector2( 2712, -1128 )
-collision_layer = 8
-collision_mask = 15
-mode = 2
-physics_material_override = SubResource( 9 )
-linear_damp = 1.0
-script = ExtResource( 129 )
+[node name="ouch" type="AudioStreamPlayer2D" parent="stage/y_sort/player"]
+stream = ExtResource( 88 )
+max_distance = 500.0
+attenuation = 3.0
 
-[node name="collision_shape_2d" type="CollisionShape2D" parent="stage/y_sort/payload"]
-shape = SubResource( 5 )
+[node name="goal_waypoint" parent="stage/y_sort" instance=ExtResource( 194 )]
+position = Vector2( 3261, -1167 )
 
-[node name="animated_sprite" type="AnimatedSprite" parent="stage/y_sort/payload"]
-scale = Vector2( 3, 3 )
-frames = SubResource( 6 )
-
-[node name="movement" type="Node" parent="stage/y_sort/payload"]
-script = ExtResource( 66 )
-body_path = NodePath("..")
-direction_path = NodePath("..")
-acceleration = 500.0
-default_max_speed = 100.0
-
-[node name="waypoint_aggro" type="Area2D" parent="stage/y_sort/payload"]
-visible = false
-script = ExtResource( 131 )
-raycast_path = NodePath("../waypoint_aggro_raycast")
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="stage/y_sort/payload/waypoint_aggro"]
-shape = SubResource( 8 )
-
-[node name="waypoint_aggro_raycast" type="RayCast2D" parent="stage/y_sort/payload"]
-enabled = true
-
-[node name="health_layer" type="CanvasLayer" parent="stage/y_sort/payload"]
-
-[node name="margin_container" type="MarginContainer" parent="stage/y_sort/payload/health_layer"]
-margin_right = 117.0
-margin_bottom = 111.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="texture_progress" type="TextureProgress" parent="stage/y_sort/payload/health_layer/margin_container"]
-margin_right = 117.0
-margin_bottom = 111.0
-texture_over = ExtResource( 132 )
-texture_progress = ExtResource( 192 )
-fill_mode = 8
-
-[node name="animated_sprite" type="AnimatedSprite" parent="stage/y_sort/payload/health_layer/margin_container/texture_progress"]
-position = Vector2( 12, 6 )
-scale = Vector2( 3, 3 )
-z_index = -1
-frames = SubResource( 10 )
-frame = 21
-playing = true
-centered = false
-
-[node name="health_debug" type="Label" parent="stage/y_sort/payload/health_layer"]
-margin_left = 39.0
-margin_top = 102.0
-margin_right = 79.0
-margin_bottom = 116.0
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="start_button" parent="stage/y_sort" instance=ExtResource( 1 )]
+position = Vector2( 2749.85, -1114.62 )
 
 [node name="waypoint" parent="stage/y_sort" instance=ExtResource( 130 )]
 position = Vector2( 543, 717 )
@@ -441,76 +256,585 @@ position = Vector2( 4098, 57 )
 position = Vector2( 3621, -204 )
 
 [node name="waypoint_11" parent="stage/y_sort" instance=ExtResource( 130 )]
-position = Vector2( 3420, -255 )
+position = Vector2( 3908.73, -558.392 )
 
 [node name="waypoint_12" parent="stage/y_sort" instance=ExtResource( 130 )]
 position = Vector2( 3261, -1119 )
+play_sfx = false
 
 [node name="waypoint_13" parent="stage/y_sort" instance=ExtResource( 130 )]
 position = Vector2( 3237, -1143 )
+play_sfx = false
 
 [node name="waypoint_14" parent="stage/y_sort" instance=ExtResource( 130 )]
 position = Vector2( 3285, -1143 )
+play_sfx = false
 
 [node name="waypoint_15" parent="stage/y_sort" instance=ExtResource( 130 )]
 position = Vector2( 3309, -1167 )
+play_sfx = false
 
 [node name="waypoint_16" parent="stage/y_sort" instance=ExtResource( 130 )]
 position = Vector2( 3213, -1167 )
+play_sfx = false
 
 [node name="waypoint_17" parent="stage/y_sort" instance=ExtResource( 130 )]
 position = Vector2( 3237, -1191 )
+play_sfx = false
 
 [node name="waypoint_18" parent="stage/y_sort" instance=ExtResource( 130 )]
 position = Vector2( 3261, -1215 )
+play_sfx = false
 
 [node name="waypoint_19" parent="stage/y_sort" instance=ExtResource( 130 )]
 position = Vector2( 3285, -1191 )
+play_sfx = false
 
-[node name="goal_waypoint" parent="stage/y_sort" instance=ExtResource( 194 )]
-position = Vector2( 3261, -1167 )
+[node name="enemy_position" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 722.405, 448.611 )
 
-[node name="camera_limiters" type="Node2D" parent="stage"]
-visible = false
+[node name="enemy_position2" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 857.689, 583.896 )
 
-[node name="camera_limit_area" type="Area2D" parent="stage/camera_limiters"]
-collision_layer = 0
-collision_mask = 2
-script = ExtResource( 67 )
+[node name="enemy_position3" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 981.283, 849.454 )
 
-[node name="collision_shape_2d" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_area"]
-position = Vector2( 561, 315 )
-shape = SubResource( 7 )
+[node name="enemy_position4" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 752.468, 934.634 )
 
-[node name="collision_shape_2d2" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_area"]
-position = Vector2( 561, 945 )
-shape = SubResource( 7 )
+[node name="enemy_position5" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 1307.65, 1097.49 )
 
-[node name="collision_shape_2d3" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_area"]
-position = Vector2( 561, 1575 )
-shape = SubResource( 7 )
+[node name="enemy_position6" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 1409.44, 323.93 )
 
-[node name="limit_left" type="Position2D" parent="stage/camera_limiters/camera_limit_area"]
+[node name="enemy_position7" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 1329.86, 516.394 )
 
-[node name="camera_limit_area2" type="Area2D" parent="stage/camera_limiters"]
-position = Vector2( 561, 315 )
-collision_layer = 0
-collision_mask = 2
-script = ExtResource( 67 )
+[node name="enemy_position8" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 1613, 927.231 )
 
-[node name="collision_shape_2d" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_area2"]
-shape = SubResource( 7 )
+[node name="enemy_position9" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 1777.71, 592.27 )
 
-[node name="collision_shape_2d2" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_area2"]
-position = Vector2( 1122, 0 )
-shape = SubResource( 7 )
+[node name="enemy_position10" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 2027.54, 340.586 )
 
-[node name="collision_shape_2d3" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_area2"]
-position = Vector2( 1743, 0 )
-shape = SubResource( 7 )
+[node name="enemy_position11" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 2049.75, 875.414 )
 
-[node name="limit_top" type="Position2D" parent="stage/camera_limiters/camera_limit_area2"]
-position = Vector2( 0, -315 )
+[node name="enemy_position12" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 1616.71, 542.303 )
+
+[node name="enemy_position13" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 1812.87, 342.437 )
+
+[node name="enemy_position14" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 1812.87, 342.437 )
+
+[node name="enemy_position15" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 2410.62, 966.094 )
+
+[node name="enemy_position16" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 2484.64, 949.438 )
+
+[node name="enemy_position17" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 2464.29, 995.704 )
+
+[node name="enemy_position18" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 2947.3, 77.7985 )
+
+[node name="enemy_position19" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3013.92, 92.6035 )
+
+[node name="enemy_position20" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 2954.7, 137.018 )
+
+[node name="enemy_position21" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 2882.53, 111.11 )
+
+[node name="enemy_position22" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 2888.08, 20.4294 )
+
+[node name="enemy_position23" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 2962.1, 13.0269 )
+
+[node name="enemy_position24" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3043.53, 161.076 )
+
+[node name="enemy_position25" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3069.44, 64.8442 )
+
+[node name="enemy_position26" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 4309.35, 1149.3 )
+
+[node name="enemy_position27" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3672.74, 792.136 )
+
+[node name="enemy_position28" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3310.02, 888.368 )
+
+[node name="enemy_position29" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3137.91, 1058.62 )
+
+[node name="enemy_position30" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3284.11, 1069.73 )
+
+[node name="enemy_position31" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 2930.64, 742.169 )
+
+[node name="enemy_position32" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3928.12, 434.967 )
+
+[node name="enemy_position33" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 4089.13, 658.891 )
+
+[node name="enemy_position34" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 4185.36, 553.406 )
+
+[node name="enemy_position35" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 4115.04, 416.461 )
+
+[node name="enemy_position36" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3976.24, 597.821 )
+
+[node name="enemy_position37" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3911.47, 901.322 )
+
+[node name="enemy_position38" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3974.39, 31.5327 )
+
+[node name="enemy_position39" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 4064.05, -297.229 )
+
+[node name="enemy_position40" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3675.51, -225.148 )
+
+[node name="enemy_position41" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3735.29, -524.022 )
+
+[node name="enemy_position42" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3487.4, -197.018 )
+
+[node name="enemy_position43" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3385.43, -604.894 )
+
+[node name="enemy_position44" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3541.9, -756.089 )
+
+[node name="enemy_position45" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3330.93, -785.977 )
+
+[node name="enemy_position46" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3513.77, -631.265 )
+
+[node name="enemy_position47" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3118.2, -851.026 )
+
+[node name="enemy_position48" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3090.07, -432.602 )
+
+[node name="enemy_position49" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3596.4, -902.01 )
+
+[node name="enemy_position50" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3100.62, -1016.29 )
+
+[node name="enemy_position53" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3849.57, -981.124 )
+
+[node name="enemy_position54" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 4035.92, -757.847 )
+
+[node name="enemy_position55" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 2808.78, -731.476 )
+
+[node name="enemy_position56" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 2655.83, -552.151 )
+
+[node name="enemy_position57" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 2606.6, -740.266 )
+
+[node name="enemy_position58" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 2657.58, -314.81 )
+
+[node name="enemy_position51" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3237.75, -988.156 )
+
+[node name="enemy_position52" parent="stage/y_sort" instance=ExtResource( 2 )]
+position = Vector2( 3420.59, -972.333 )
+
+[node name="back_walls" type="YSort" parent="stage"]
+z_index = -2
+
+[node name="wall354" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2460, 219 )
+
+[node name="wall353" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2424, 219 )
+
+[node name="wall352" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2388, 219 )
+
+[node name="wall351" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2352, 219 )
+
+[node name="wall350" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2316, 219 )
+
+[node name="wall349" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2280, 219 )
+
+[node name="wall348" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2244, 219 )
+
+[node name="wall347" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2208, 219 )
+
+[node name="wall346" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2172, 219 )
+
+[node name="wall345" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2136, 219 )
+
+[node name="wall344" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2100, 219 )
+
+[node name="wall343" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2064, 219 )
+
+[node name="wall342" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2028, 219 )
+
+[node name="wall341" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1992, 219 )
+
+[node name="wall340" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1956, 219 )
+
+[node name="wall339" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1920, 219 )
+
+[node name="wall338" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1884, 219 )
+
+[node name="wall337" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1848, 219 )
+
+[node name="wall336" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1812, 219 )
+
+[node name="wall335" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1776, 219 )
+
+[node name="wall334" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1740, 219 )
+
+[node name="wall333" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1704, 219 )
+
+[node name="wall332" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1668, 219 )
+
+[node name="wall331" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1632, 219 )
+
+[node name="wall330" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1596, 219 )
+
+[node name="wall329" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1560, 219 )
+
+[node name="wall328" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1524, 219 )
+
+[node name="wall327" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1488, 219 )
+
+[node name="wall326" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1452, 219 )
+
+[node name="wall325" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1416, 219 )
+
+[node name="wall324" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1380, 219 )
+
+[node name="wall323" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1344, 219 )
+
+[node name="wall322" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1308, 219 )
+
+[node name="wall321" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1272, 219 )
+
+[node name="wall320" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1236, 219 )
+
+[node name="wall319" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1200, 219 )
+
+[node name="wall318" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1164, 219 )
+
+[node name="wall317" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1128, 219 )
+
+[node name="wall316" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1092, 219 )
+
+[node name="wall315" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1056, 219 )
+
+[node name="wall394" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 1020, 219 )
+
+[node name="wall393" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 984, 219 )
+
+[node name="wall392" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 948, 219 )
+
+[node name="wall391" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 912, 219 )
+
+[node name="wall390" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 876, 219 )
+
+[node name="wall389" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 840, 219 )
+
+[node name="wall388" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 804, 219 )
+
+[node name="wall387" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 768, 219 )
+
+[node name="wall386" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 732, 219 )
+
+[node name="wall385" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 696, 219 )
+
+[node name="wall384" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 660, 219 )
+
+[node name="wall383" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 624, 219 )
+
+[node name="wall382" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 588, 219 )
+
+[node name="wall381" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 552, 219 )
+
+[node name="wall380" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 516, 219 )
+
+[node name="wall379" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 480, 219 )
+
+[node name="wall378" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 444, 219 )
+
+[node name="wall377" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 408, 219 )
+
+[node name="wall376" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 372, 219 )
+
+[node name="wall375" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 336, 219 )
+
+[node name="wall374" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 300, 219 )
+
+[node name="wall373" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 264, 219 )
+
+[node name="wall372" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 228, 219 )
+
+[node name="wall371" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 192, 219 )
+
+[node name="wall370" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 168, 228 )
+
+[node name="wall369" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 180, 216 )
+
+[node name="wall368" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 150, 246 )
+
+[node name="wall367" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 132, 264 )
+
+[node name="wall366" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 114, 282 )
+
+[node name="wall97" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4350, -1347 )
+
+[node name="wall98" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4314, -1347 )
+
+[node name="wall100" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4278, -1347 )
+
+[node name="wall99" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4242, -1347 )
+
+[node name="wall102" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4206, -1347 )
+
+[node name="wall101" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4170, -1347 )
+
+[node name="wall104" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4134, -1347 )
+
+[node name="wall103" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4098, -1347 )
+
+[node name="wall106" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4062, -1347 )
+
+[node name="wall105" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 4026, -1347 )
+
+[node name="wall113" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3990, -1347 )
+
+[node name="wall112" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3954, -1347 )
+
+[node name="wall111" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3918, -1347 )
+
+[node name="wall110" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3882, -1347 )
+
+[node name="wall109" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3846, -1347 )
+
+[node name="wall108" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3810, -1347 )
+
+[node name="wall107" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3774, -1347 )
+
+[node name="wall127" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3738, -1347 )
+
+[node name="wall126" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3702, -1347 )
+
+[node name="wall125" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3666, -1347 )
+
+[node name="wall124" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3630, -1347 )
+
+[node name="wall123" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3594, -1347 )
+
+[node name="wall122" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3558, -1347 )
+
+[node name="wall121" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3522, -1347 )
+
+[node name="wall120" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3486, -1347 )
+
+[node name="wall119" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3450, -1347 )
+
+[node name="wall118" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3414, -1347 )
+
+[node name="wall117" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3378, -1347 )
+
+[node name="wall116" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3342, -1347 )
+
+[node name="wall115" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3306, -1347 )
+
+[node name="wall114" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3270, -1347 )
+
+[node name="wall141" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3234, -1347 )
+
+[node name="wall140" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3198, -1347 )
+
+[node name="wall139" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3162, -1347 )
+
+[node name="wall138" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3126, -1347 )
+
+[node name="wall137" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3090, -1347 )
+
+[node name="wall136" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3054, -1347 )
+
+[node name="wall135" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 3018, -1347 )
+
+[node name="wall134" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2982, -1347 )
+
+[node name="wall133" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2946, -1347 )
+
+[node name="wall132" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2910, -1347 )
+
+[node name="wall131" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2874, -1347 )
+
+[node name="wall130" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2838, -1347 )
+
+[node name="wall129" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2802, -1347 )
+
+[node name="wall128" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2766, -1347 )
+
+[node name="wall155" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2730, -1347 )
+
+[node name="wall154" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2694, -1347 )
+
+[node name="wall153" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2658, -1347 )
+
+[node name="wall152" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2622, -1347 )
+
+[node name="wall151" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2586, -1347 )
+
+[node name="wall150" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2550, -1347 )
+
+[node name="wall149" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2514, -1347 )
+
+[node name="wall183" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2460, 147 )
+
+[node name="wall182" parent="stage/back_walls" instance=ExtResource( 193 )]
+position = Vector2( 2460, 183 )
 
 [node name="front_walls" type="YSort" parent="stage"]
 z_index = 2
@@ -1292,378 +1616,321 @@ position = Vector2( 2496, 75 )
 [node name="wall184" parent="stage/front_walls" instance=ExtResource( 193 )]
 position = Vector2( 2496, 147 )
 
-[node name="wall183" parent="stage/front_walls" instance=ExtResource( 193 )]
-position = Vector2( 2478, 201 )
-
-[node name="wall182" parent="stage/front_walls" instance=ExtResource( 193 )]
-position = Vector2( 2496, 183 )
-
 [node name="wall73" parent="stage/front_walls" instance=ExtResource( 193 )]
 position = Vector2( 4386, -519 )
 
-[node name="back_walls" type="YSort" parent="stage"]
-z_index = -2
+[node name="camera_limiters" type="Node2D" parent="stage"]
+visible = false
+
+[node name="camera_limits_start_left" type="Area2D" parent="stage/camera_limiters"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 67 )
 
-[node name="wall354" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2460, 219 )
+[node name="collision_shape_2d" type="CollisionShape2D" parent="stage/camera_limiters/camera_limits_start_left"]
+position = Vector2( 561, 315 )
+shape = SubResource( 10 )
+
+[node name="collision_shape_2d2" type="CollisionShape2D" parent="stage/camera_limiters/camera_limits_start_left"]
+position = Vector2( 561, 945 )
+shape = SubResource( 10 )
 
-[node name="wall353" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2424, 219 )
+[node name="collision_shape_2d3" type="CollisionShape2D" parent="stage/camera_limiters/camera_limits_start_left"]
+position = Vector2( 561, 1575 )
+shape = SubResource( 10 )
 
-[node name="wall352" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2388, 219 )
+[node name="limit_left" type="Position2D" parent="stage/camera_limiters/camera_limits_start_left"]
+
+[node name="camera_limits_goal_left" type="Area2D" parent="stage/camera_limiters"]
+position = Vector2( 2304, -1575 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 67 )
 
-[node name="wall351" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2352, 219 )
+[node name="collision_shape_2d" type="CollisionShape2D" parent="stage/camera_limiters/camera_limits_goal_left"]
+position = Vector2( 561, 315 )
+shape = SubResource( 10 )
 
-[node name="wall350" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2316, 219 )
+[node name="collision_shape_2d2" type="CollisionShape2D" parent="stage/camera_limiters/camera_limits_goal_left"]
+position = Vector2( 561, 945 )
+shape = SubResource( 10 )
 
-[node name="wall349" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2280, 219 )
+[node name="collision_shape_2d3" type="CollisionShape2D" parent="stage/camera_limiters/camera_limits_goal_left"]
+position = Vector2( 561, 1320 )
+shape = SubResource( 10 )
 
-[node name="wall348" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2244, 219 )
-
-[node name="wall347" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2208, 219 )
-
-[node name="wall346" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2172, 219 )
-
-[node name="wall345" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2136, 219 )
-
-[node name="wall344" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2100, 219 )
-
-[node name="wall343" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2064, 219 )
-
-[node name="wall342" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2028, 219 )
-
-[node name="wall341" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1992, 219 )
-
-[node name="wall340" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1956, 219 )
-
-[node name="wall339" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1920, 219 )
-
-[node name="wall338" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1884, 219 )
-
-[node name="wall337" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1848, 219 )
-
-[node name="wall336" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1812, 219 )
-
-[node name="wall335" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1776, 219 )
-
-[node name="wall334" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1740, 219 )
-
-[node name="wall333" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1704, 219 )
-
-[node name="wall332" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1668, 219 )
-
-[node name="wall331" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1632, 219 )
-
-[node name="wall330" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1596, 219 )
-
-[node name="wall329" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1560, 219 )
-
-[node name="wall328" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1524, 219 )
-
-[node name="wall327" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1488, 219 )
-
-[node name="wall326" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1452, 219 )
-
-[node name="wall325" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1416, 219 )
-
-[node name="wall324" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1380, 219 )
-
-[node name="wall323" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1344, 219 )
-
-[node name="wall322" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1308, 219 )
-
-[node name="wall321" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1272, 219 )
-
-[node name="wall320" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1236, 219 )
-
-[node name="wall319" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1200, 219 )
-
-[node name="wall318" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1164, 219 )
-
-[node name="wall317" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1128, 219 )
-
-[node name="wall316" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1092, 219 )
-
-[node name="wall315" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1056, 219 )
-
-[node name="wall394" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 1020, 219 )
-
-[node name="wall393" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 984, 219 )
-
-[node name="wall392" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 948, 219 )
-
-[node name="wall391" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 912, 219 )
-
-[node name="wall390" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 876, 219 )
-
-[node name="wall389" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 840, 219 )
-
-[node name="wall388" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 804, 219 )
-
-[node name="wall387" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 768, 219 )
-
-[node name="wall386" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 732, 219 )
-
-[node name="wall385" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 696, 219 )
-
-[node name="wall384" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 660, 219 )
-
-[node name="wall383" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 624, 219 )
-
-[node name="wall382" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 588, 219 )
-
-[node name="wall381" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 552, 219 )
-
-[node name="wall380" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 516, 219 )
-
-[node name="wall379" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 480, 219 )
-
-[node name="wall378" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 444, 219 )
-
-[node name="wall377" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 408, 219 )
-
-[node name="wall376" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 372, 219 )
-
-[node name="wall375" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 336, 219 )
-
-[node name="wall374" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 300, 219 )
-
-[node name="wall373" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 264, 219 )
-
-[node name="wall372" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 228, 219 )
-
-[node name="wall371" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 192, 219 )
-
-[node name="wall370" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 168, 228 )
-
-[node name="wall369" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 180, 216 )
-
-[node name="wall368" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 150, 246 )
-
-[node name="wall367" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 132, 264 )
-
-[node name="wall366" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 114, 282 )
-
-[node name="wall97" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 4350, -1347 )
-
-[node name="wall98" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 4314, -1347 )
-
-[node name="wall100" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 4278, -1347 )
-
-[node name="wall99" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 4242, -1347 )
-
-[node name="wall102" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 4206, -1347 )
-
-[node name="wall101" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 4170, -1347 )
-
-[node name="wall104" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 4134, -1347 )
-
-[node name="wall103" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 4098, -1347 )
-
-[node name="wall106" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 4062, -1347 )
-
-[node name="wall105" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 4026, -1347 )
-
-[node name="wall113" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3990, -1347 )
-
-[node name="wall112" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3954, -1347 )
-
-[node name="wall111" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3918, -1347 )
-
-[node name="wall110" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3882, -1347 )
-
-[node name="wall109" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3846, -1347 )
-
-[node name="wall108" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3810, -1347 )
-
-[node name="wall107" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3774, -1347 )
-
-[node name="wall127" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3738, -1347 )
-
-[node name="wall126" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3702, -1347 )
-
-[node name="wall125" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3666, -1347 )
-
-[node name="wall124" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3630, -1347 )
-
-[node name="wall123" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3594, -1347 )
-
-[node name="wall122" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3558, -1347 )
-
-[node name="wall121" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3522, -1347 )
-
-[node name="wall120" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3486, -1347 )
-
-[node name="wall119" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3450, -1347 )
-
-[node name="wall118" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3414, -1347 )
-
-[node name="wall117" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3378, -1347 )
-
-[node name="wall116" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3342, -1347 )
-
-[node name="wall115" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3306, -1347 )
-
-[node name="wall114" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3270, -1347 )
-
-[node name="wall141" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3234, -1347 )
-
-[node name="wall140" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3198, -1347 )
-
-[node name="wall139" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3162, -1347 )
-
-[node name="wall138" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3126, -1347 )
-
-[node name="wall137" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3090, -1347 )
-
-[node name="wall136" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3054, -1347 )
-
-[node name="wall135" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 3018, -1347 )
-
-[node name="wall134" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2982, -1347 )
-
-[node name="wall133" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2946, -1347 )
-
-[node name="wall132" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2910, -1347 )
-
-[node name="wall131" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2874, -1347 )
-
-[node name="wall130" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2838, -1347 )
-
-[node name="wall129" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2802, -1347 )
-
-[node name="wall128" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2766, -1347 )
-
-[node name="wall155" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2730, -1347 )
-
-[node name="wall154" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2694, -1347 )
-
-[node name="wall153" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2658, -1347 )
-
-[node name="wall152" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2622, -1347 )
-
-[node name="wall151" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2586, -1347 )
-
-[node name="wall150" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2550, -1347 )
-
-[node name="wall149" parent="stage/back_walls" instance=ExtResource( 193 )]
-position = Vector2( 2514, -1347 )
-[connection signal="aggro" from="stage/y_sort/payload/waypoint_aggro" to="stage/y_sort/payload" method="_on_waypoint_aggro_aggro"]
+[node name="limit_left" type="Position2D" parent="stage/camera_limiters/camera_limits_goal_left"]
+
+[node name="camera_limit_start_top" type="Area2D" parent="stage/camera_limiters"]
+position = Vector2( 561, 315 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 67 )
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_start_top"]
+shape = SubResource( 10 )
+
+[node name="collision_shape_2d2" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_start_top"]
+position = Vector2( 1122, 0 )
+shape = SubResource( 10 )
+
+[node name="collision_shape_2d3" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_start_top"]
+position = Vector2( 1338, 0 )
+shape = SubResource( 10 )
+
+[node name="limit_top" type="Position2D" parent="stage/camera_limiters/camera_limit_start_top"]
+position = Vector2( 0, -315 )
+
+[node name="camera_limit_goal_top" type="Area2D" parent="stage/camera_limiters"]
+position = Vector2( 2721, -1221 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 67 )
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_goal_top"]
+shape = SubResource( 10 )
+
+[node name="collision_shape_2d2" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_goal_top"]
+position = Vector2( 1122, 0 )
+shape = SubResource( 10 )
+
+[node name="collision_shape_2d3" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_goal_top"]
+position = Vector2( 1338, 0 )
+shape = SubResource( 10 )
+
+[node name="limit_top" type="Position2D" parent="stage/camera_limiters/camera_limit_goal_top"]
+position = Vector2( 0, -315 )
+
+[node name="camera_limit_bottom" type="Area2D" parent="stage/camera_limiters"]
+position = Vector2( 573, 1038 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 67 )
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_bottom"]
+shape = SubResource( 10 )
+
+[node name="collision_shape_2d2" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_bottom"]
+position = Vector2( 1122, 0 )
+shape = SubResource( 10 )
+
+[node name="collision_shape_2d3" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_bottom"]
+position = Vector2( 2244, 0 )
+shape = SubResource( 10 )
+
+[node name="collision_shape_2d4" type="CollisionShape2D" parent="stage/camera_limiters/camera_limit_bottom"]
+position = Vector2( 3366, 0 )
+shape = SubResource( 10 )
+
+[node name="limit_bottom" type="Position2D" parent="stage/camera_limiters/camera_limit_bottom"]
+position = Vector2( 0, 315 )
+
+[node name="camera_limits_right" type="Area2D" parent="stage/camera_limiters"]
+position = Vector2( 3945, 1026 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 67 )
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="stage/camera_limiters/camera_limits_right"]
+shape = SubResource( 10 )
+
+[node name="collision_shape_2d2" type="CollisionShape2D" parent="stage/camera_limiters/camera_limits_right"]
+position = Vector2( 0, -615 )
+shape = SubResource( 10 )
+
+[node name="collision_shape_2d3" type="CollisionShape2D" parent="stage/camera_limiters/camera_limits_right"]
+position = Vector2( 0, -1230 )
+shape = SubResource( 10 )
+
+[node name="collision_shape_2d4" type="CollisionShape2D" parent="stage/camera_limiters/camera_limits_right"]
+position = Vector2( 0, -1851 )
+shape = SubResource( 10 )
+
+[node name="collision_shape_2d5" type="CollisionShape2D" parent="stage/camera_limiters/camera_limits_right"]
+position = Vector2( 0, -2355 )
+shape = SubResource( 10 )
+
+[node name="limit_right" type="Position2D" parent="stage/camera_limiters/camera_limits_right"]
+position = Vector2( 561, 0 )
+
+[node name="stage_results" type="CanvasLayer" parent="."]
+
+[node name="margin_container" type="MarginContainer" parent="stage_results"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -385.5
+margin_right = 385.5
+margin_bottom = 291.0
+custom_constants/margin_right = 30
+custom_constants/margin_top = 30
+custom_constants/margin_left = 30
+custom_constants/margin_bottom = 30
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nine_patch_rect" type="NinePatchRect" parent="stage_results/margin_container"]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 741.0
+margin_bottom = 261.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 71 )
+region_rect = Rect2( 3, 3, 87, 87 )
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 33
+patch_margin_bottom = 33
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="stage_complete" type="MarginContainer" parent="stage_results/margin_container"]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 741.0
+margin_bottom = 261.0
+custom_constants/margin_right = 21
+custom_constants/margin_top = 21
+custom_constants/margin_left = 21
+custom_constants/margin_bottom = 21
+
+[node name="v_box_container" type="VBoxContainer" parent="stage_results/margin_container/stage_complete"]
+margin_left = 21.0
+margin_top = 21.0
+margin_right = 690.0
+margin_bottom = 210.0
+
+[node name="label" type="Label" parent="stage_results/margin_container/stage_complete/v_box_container"]
+modulate = Color( 0.94902, 0.937255, 0.662745, 1 )
+margin_right = 669.0
+margin_bottom = 31.0
+text = "Stage Complete
+Please select an ability to continue"
+align = 1
+
+[node name="h_box_container" type="HBoxContainer" parent="stage_results/margin_container/stage_complete/v_box_container"]
+margin_top = 35.0
+margin_right = 669.0
+margin_bottom = 124.0
+
+[node name="ability_container" type="VBoxContainer" parent="stage_results/margin_container/stage_complete/v_box_container/h_box_container"]
+margin_right = 155.0
+margin_bottom = 89.0
+alignment = 1
+
+[node name="label" type="Label" parent="stage_results/margin_container/stage_complete/v_box_container/h_box_container/ability_container"]
+modulate = Color( 0.94902, 0.937255, 0.662745, 1 )
+margin_right = 155.0
+margin_bottom = 65.0
+text = "aggro grab
+
+Get your enemies'
+attention with right click"
+align = 1
+
+[node name="button" type="Button" parent="stage_results/margin_container/stage_complete/v_box_container/h_box_container/ability_container"]
+margin_left = 12.0
+margin_top = 69.0
+margin_right = 142.0
+margin_bottom = 89.0
+size_flags_horizontal = 4
+text = "Choose this ability"
+
+[node name="control" type="Control" parent="stage_results/margin_container/stage_complete/v_box_container"]
+margin_top = 128.0
+margin_right = 669.0
+margin_bottom = 165.0
+size_flags_vertical = 3
+
+[node name="button" type="Button" parent="stage_results/margin_container/stage_complete/v_box_container"]
+margin_left = 243.0
+margin_top = 169.0
+margin_right = 426.0
+margin_bottom = 189.0
+size_flags_horizontal = 4
+text = "Continue without an ability"
+
+[node name="stage_failed" type="MarginContainer" parent="stage_results/margin_container"]
+visible = false
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 741.0
+margin_bottom = 261.0
+custom_constants/margin_right = 21
+custom_constants/margin_top = 21
+custom_constants/margin_left = 21
+custom_constants/margin_bottom = 21
+
+[node name="v_box_container" type="VBoxContainer" parent="stage_results/margin_container/stage_failed"]
+margin_left = 21.0
+margin_top = 21.0
+margin_right = 690.0
+margin_bottom = 210.0
+
+[node name="label" type="Label" parent="stage_results/margin_container/stage_failed/v_box_container"]
+modulate = Color( 0.94902, 0.937255, 0.662745, 1 )
+margin_right = 669.0
+margin_bottom = 48.0
+text = "
+Stage Failed
+"
+align = 1
+valign = 1
+
+[node name="rich_text_label" type="RichTextLabel" parent="stage_results/margin_container/stage_failed/v_box_container"]
+modulate = Color( 0.94902, 0.937255, 0.662745, 1 )
+margin_top = 52.0
+margin_right = 669.0
+margin_bottom = 165.0
+size_flags_horizontal = 5
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "[center]The [color=#9c519a]Inferno Heart[/color] has been reclaimed by your enemies.
+Better luck next time.[/center]"
+text = "The Inferno Heart has been reclaimed by your enemies.
+Better luck next time."
+scroll_active = false
+
+[node name="h_box_container" type="HBoxContainer" parent="stage_results/margin_container/stage_failed/v_box_container"]
+margin_top = 169.0
+margin_right = 669.0
+margin_bottom = 189.0
+alignment = 1
+
+[node name="try_again_button" type="Button" parent="stage_results/margin_container/stage_failed/v_box_container/h_box_container"]
+margin_left = 278.0
+margin_right = 352.0
+margin_bottom = 20.0
+size_flags_horizontal = 4
+text = "Try again?"
+
+[node name="exit_button" type="Button" parent="stage_results/margin_container/stage_failed/v_box_container/h_box_container"]
+margin_left = 356.0
+margin_right = 391.0
+margin_bottom = 20.0
+size_flags_horizontal = 4
+text = "Exit"
+
+[node name="indicator_arrow" type="AnimatedSprite" parent="."]
+scale = Vector2( 3, 3 )
+z_index = 100
+frames = SubResource( 11 )
+script = ExtResource( 72 )
+
+[node name="health_layer" parent="." instance=ExtResource( 85 )]
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 86 )
+volume_db = -5.0
+autoplay = true
+
+[node name="wind" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 87 )
+volume_db = -10.0
+
+[node name="tween" type="Tween" parent="wind"]

@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://external/aseprite/wall_01.png" type="Texture" id=3]
+[ext_resource path="res://external/aseprite/wall_00.png" type="Texture" id=1]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 3 ) ],
+"frames": [ ExtResource( 1 ) ],
 "loop": false,
 "name": "default",
 "speed": 5.0

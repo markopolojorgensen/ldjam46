@@ -1,6 +1,6 @@
 COLORTOOL v1.0
 SECTION PALETTE 263
-#07041a #031915 #0f2a22 #1e1c2e #271033 #122237 #161b4b #234638 #44434f #5d2d55 #58592d #406854 #316767 #334378 #737278 #678f77 #68a281 #8a8c40 #915d6e #5c75a2 #a8a9a6 #98baa2 #8fabcc #adc6d0 #d1d7b7 #bee6b8 #c6e7c4 #d3e9d7 #e3e6da #d4df9c #d5d962 #b2b552 #ccaba3
+#07041a #031915 #0f2a22 #1e1c2e #271033 #122237 #161b4b #234638 #44434f #5d2d55 #58592d #406854 #316767 #334378 #737278 #678f77 #68a281 #8a8c40 #915d6e #5c75a2 #a8a9a6 #98baa2 #8fabcc #adc6d0 #d1d7b7 #bee5b8 #c6e7c4 #d3e9d7 #e3e5da #d4df9c #d5d962 #b2b552 #ccaba3
 SECTION DOCUMENT 13086
 {
  "id": "15871732781075647505",
@@ -15,12 +15,12 @@ SECTION DOCUMENT 13086
    ]
   },
   "draw_grid": false,
-  "zoom": 0,
+  "zoom": -1,
   "scroll": {
    "_t": "Vector2",
    "value": [
-    253.5,
-    93.5
+    30.5,
+    73.5
    ]
   },
   "old_path_root": "/home/mark/fuel/data/godot/ldjams/LDJAM46/external"
@@ -700,7 +700,7 @@ SECTION DOCUMENT 13086
     "_t": "Vector2",
     "value": [
      217,
-     121
+     105
     ]
    },
    "index": 0,

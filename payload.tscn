@@ -1,0 +1,146 @@
+[gd_scene load_steps=73 format=2]
+
+[ext_resource path="res://addons/aggro/aggro.gd" type="Script" id=1]
+[ext_resource path="res://addons/movement/top_down_movement.gd" type="Script" id=2]
+[ext_resource path="res://payload.gd" type="Script" id=3]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_14.png" type="Texture" id=4]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_04.png" type="Texture" id=5]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_26.png" type="Texture" id=6]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_06.png" type="Texture" id=7]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_24.png" type="Texture" id=8]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_18.png" type="Texture" id=9]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_03.png" type="Texture" id=10]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_51.png" type="Texture" id=11]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_52.png" type="Texture" id=12]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_00.png" type="Texture" id=13]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_25.png" type="Texture" id=14]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_53.png" type="Texture" id=15]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_11.png" type="Texture" id=16]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_15.png" type="Texture" id=17]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_13.png" type="Texture" id=18]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_45.png" type="Texture" id=19]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_36.png" type="Texture" id=20]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_02.png" type="Texture" id=21]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_37.png" type="Texture" id=22]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_16.png" type="Texture" id=23]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_08.png" type="Texture" id=24]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_01.png" type="Texture" id=25]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_21.png" type="Texture" id=26]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_30.png" type="Texture" id=27]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_07.png" type="Texture" id=28]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_47.png" type="Texture" id=29]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_34.png" type="Texture" id=30]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_35.png" type="Texture" id=31]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_10.png" type="Texture" id=32]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_42.png" type="Texture" id=33]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_09.png" type="Texture" id=34]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_17.png" type="Texture" id=35]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_05.png" type="Texture" id=36]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_46.png" type="Texture" id=37]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_44.png" type="Texture" id=38]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_23.png" type="Texture" id=39]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_27.png" type="Texture" id=40]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_59.png" type="Texture" id=41]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_54.png" type="Texture" id=42]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_50.png" type="Texture" id=43]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_49.png" type="Texture" id=44]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_48.png" type="Texture" id=45]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_32.png" type="Texture" id=46]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_12.png" type="Texture" id=47]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_43.png" type="Texture" id=48]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_38.png" type="Texture" id=49]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_29.png" type="Texture" id=50]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_31.png" type="Texture" id=51]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_55.png" type="Texture" id=52]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_28.png" type="Texture" id=53]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_33.png" type="Texture" id=54]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_40.png" type="Texture" id=55]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_41.png" type="Texture" id=56]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_22.png" type="Texture" id=57]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_56.png" type="Texture" id=58]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_57.png" type="Texture" id=59]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_58.png" type="Texture" id=60]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_20.png" type="Texture" id=61]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_19.png" type="Texture" id=62]
+[ext_resource path="res://external/pfxd/payload/aseprite_frames/payload_39.png" type="Texture" id=63]
+[ext_resource path="res://external/sunvox/krakow.wav" type="AudioStream" id=64]
+[ext_resource path="res://external/sunvox/ouch.wav" type="AudioStream" id=65]
+[ext_resource path="res://external/sunvox/heart_ouch.wav" type="AudioStream" id=66]
+[ext_resource path="res://external/sunvox/fanfare.wav" type="AudioStream" id=67]
+[ext_resource path="res://external/aseprite/inferno_heart.png" type="Texture" id=126]
+
+[sub_resource type="PhysicsMaterial" id=1]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 45.0
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 25 ), ExtResource( 21 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 36 ), ExtResource( 7 ), ExtResource( 28 ), ExtResource( 24 ), ExtResource( 34 ), ExtResource( 32 ), ExtResource( 16 ), ExtResource( 47 ), ExtResource( 18 ), ExtResource( 4 ), ExtResource( 17 ), ExtResource( 23 ), ExtResource( 35 ), ExtResource( 9 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 26 ), ExtResource( 57 ), ExtResource( 39 ), ExtResource( 8 ), ExtResource( 14 ), ExtResource( 6 ), ExtResource( 40 ), ExtResource( 53 ), ExtResource( 50 ), ExtResource( 27 ), ExtResource( 51 ), ExtResource( 46 ), ExtResource( 54 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 49 ), ExtResource( 63 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 33 ), ExtResource( 48 ), ExtResource( 38 ), ExtResource( 19 ), ExtResource( 37 ), ExtResource( 29 ), ExtResource( 45 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 42 ), ExtResource( 52 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "default",
+"speed": 60.0
+} ]
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 700.0
+
+[node name="payload" type="RigidBody2D"]
+collision_layer = 8
+collision_mask = 15
+mode = 2
+physics_material_override = SubResource( 1 )
+linear_damp = 1.0
+script = ExtResource( 3 )
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -30 )
+shape = SubResource( 2 )
+
+[node name="inferno_heart" type="Sprite" parent="."]
+position = Vector2( 0, -30 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 126 )
+
+[node name="animated_sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -33 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 3 )
+
+[node name="movement" type="Node" parent="."]
+script = ExtResource( 2 )
+body_path = NodePath("..")
+direction_path = NodePath("..")
+acceleration = 500.0
+default_max_speed = 100.0
+
+[node name="waypoint_aggro" type="Area2D" parent="."]
+visible = false
+script = ExtResource( 1 )
+raycast_path = NodePath("../waypoint_aggro_raycast")
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="waypoint_aggro"]
+shape = SubResource( 4 )
+
+[node name="waypoint_aggro_raycast" type="RayCast2D" parent="."]
+enabled = true
+
+[node name="visibility_notifier_2d" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( 3, -39 )
+scale = Vector2( 4.8, 6 )
+
+[node name="krakow" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 64 )
+
+[node name="ouch" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 65 )
+max_distance = 1000.0
+attenuation = 2.0
+
+[node name="heart_ouch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 66 )
+
+[node name="fanfare" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 67 )
+[connection signal="aggro" from="waypoint_aggro" to="." method="_on_waypoint_aggro_aggro"]

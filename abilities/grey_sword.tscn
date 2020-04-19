@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_18.png" type="Texture" id=1]
 [ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_02.png" type="Texture" id=2]
@@ -23,24 +23,10 @@
 [ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_03.png" type="Texture" id=21]
 [ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_11.png" type="Texture" id=22]
 [ext_resource path="res://external/smear/grey_sword/frames/grey_sword_animated_22.png" type="Texture" id=23]
+[ext_resource path="res://abilities/grey_sword.gd" type="Script" id=24]
+[ext_resource path="res://external/sunvox/wheow.wav" type="AudioStream" id=25]
 
-[sub_resource type="GDScript" id=1]
-script/source = "extends Node2D
-
-func _ready():
-	$animation_player.play(\"swing\")
-	
-	yield($animation_player, \"animation_finished\")
-	
-	queue_free()
-
-func _on_hitbox_body_entered(body):
-	if body.has_method(\"hit_by_grey_sword\"):
-		body.hit_by_grey_sword()
-
-"
-
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 14 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 21 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 10 ), ExtResource( 18 ), ExtResource( 9 ), ExtResource( 22 ), ExtResource( 17 ), ExtResource( 20 ), ExtResource( 6 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 12 ), ExtResource( 16 ), ExtResource( 11 ), ExtResource( 23 ) ],
 "loop": false,
@@ -48,7 +34,7 @@ animations = [ {
 "speed": 60.0
 } ]
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=3]
 resource_name = "swing"
 length = 0.4
 step = 0.005
@@ -124,27 +110,45 @@ tracks/5/keys = {
 "update": 1,
 "values": [ true, false, true ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("audio_stream_player_2d:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [node name="grey_sword" type="Node2D"]
-script = SubResource( 1 )
+modulate = Color( 1, 1, 1, 0 )
+z_index = 10
+script = ExtResource( 24 )
 
 [node name="animated_sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 3, 3 )
 z_index = -1
-frames = SubResource( 5 )
-frame = 10
+frames = SubResource( 2 )
+frame = 22
 
 [node name="animation_player" type="AnimationPlayer" parent="."]
-anims/swing = SubResource( 6 )
+anims/swing = SubResource( 3 )
 
 [node name="hitbox" type="Area2D" parent="."]
-position = Vector2( -37.7301, 2.94455 )
-rotation = 0.174257
+position = Vector2( -41.599, 27.7055 )
+rotation = 1.74292
 collision_layer = 0
-collision_mask = 4
+collision_mask = 0
 
 [node name="collision_polygon_2d" type="CollisionPolygon2D" parent="hitbox"]
 position = Vector2( 19.502, -42.486 )
 rotation = -0.00966421
 polygon = PoolVector2Array( -52.2221, -14.3203, 21.7711, -45.1333, 76.0924, 1.25233, 0.588037, 50.3568 )
+disabled = true
+
+[node name="audio_stream_player_2d" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 25 )
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

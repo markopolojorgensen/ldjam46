@@ -23,26 +23,54 @@ PHASE ONE
   starting ability: melee swing
   walls
   goal
-
-  you win menu
+  fix gross colors
   you lose menu
+  you win menu
+  increase enemy speed
+  payload heart internal
+  animated payload health bar
+  knockback
+  enemies get out in front of heart
+  heart direction indicator hud element
+  cursor sprite
+  goal should destroy remaining enemies
+  death animations
+  players aggro enemies
+  players share damage with inferno heart
+  main upbeat music
+  sfx
+  
 
+  hold click to autoswing
+  longer sword cooldown?
+  click swing timing
+  
   one stage, twice
     second time through, more enemies
   one choice:
-    personal armor & summon wall?
+    personal armor & pull aggro? summon wall?
     aoe ranged damage & payload defends itself
-  main upbeat music
   TUTORIAL
+    sword swings towards mouse cursor
+    heart follows waypoints
+    this is what the goal looks like
+    get the heart to the goal
+    you take damage
+    the heart takes damage
+    you both take damage
+      you have the same health pool
 
 PHASE TWO
-  payload heart internal
+  waypoint animations
   menu
   shadows for player and enemies and payload
   disco ball???
   payload continues beyond player death?
-  animated payload health bar
   payload speeds up if there's no enemies
+  heartbeat sfx (speeds up on low health?)
+  footstep sounds fx
+  keen
+  panning
 
 SHIP IT
   delete leftover pfxd frames
@@ -57,6 +85,7 @@ relatedness
 competence
   long term growth
     a new ability after every stage
+
 
 
 
@@ -86,10 +115,14 @@ passive abilities
   payload moves faster
   payload moves faster when you're next to it?
   swing as fast as you can click
+  faster attack speed, lower damage
+  li'l helper guys
 active abilities
   warcry? grab aggro aoe
+  grappling hook aka get over here
   aoe damage
-  single target
+  single target high damage nuke
+  heat seeking missiles
 
 
 
@@ -126,15 +159,15 @@ playlist
   esa
   fez
   age of mythology
-
   ff12
+
+  hyper light drifter
   chrono trigger
   crypt of the necrodancer
   secret of mana
   ff6
   ffcc
   ffta
-  hyper light drifter
   ftl
   into the breach
   stardew valley

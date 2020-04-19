@@ -8,12 +8,21 @@ const small_red_sword_scene = preload("res://abilities/small_red_sword.tscn")
 const striking_distance = 80
 const sword_offset = 15
 
+const knockback = 1000
+var pending_impulse = Vector2()
+
+const explode_fx = preload("res://fx/enemy_explode_fx.tscn")
+
 func _ready():
 	$animated_sprite.play()
+	$animated_sprite.frame = rand_range(0, 100)
 	add_to_group("enemy")
+	add_to_group("goal")
 
 func _integrate_forces(state):
 	$movement.do_movement(state)
+	state.apply_central_impulse(pending_impulse)
+	pending_impulse = Vector2()
 
 func _process(_delta):
 	# maybe attack target
@@ -36,7 +45,9 @@ func _process(_delta):
 func get_intended_direction():
 	var direction = Vector2()
 	if current_target_ref and current_target_ref.get_ref():
-		direction = current_target_ref.get_ref().global_position - global_position
+		var target = current_target_ref.get_ref()
+		var target_position = target.global_position + (target.linear_velocity.normalized() * 80)
+		direction = target_position - global_position
 	return direction
 
 func _on_aggro_aggro(entity):
@@ -45,9 +56,26 @@ func _on_aggro_aggro(entity):
 func _on_aggro_aggro_lost(_entity):
 	current_target_ref = null
 
-func hit_by_grey_sword():
+func hit_by_grey_sword(player_position):
+	$ouch.play()
 	health -= 5
 	if health <= 0:
-		queue_free()
+		explode(true)
+	
+	# knockback
+	var direction = global_position - player_position
+	
+	pending_impulse += direction.normalized() * knockback
 
+func explode(sfx):
+	var inst = explode_fx.instance()
+	inst.play_sfx = sfx
+	inst.global_position = global_position
+	get_parent().add_child(inst)
+	
+	queue_free()
 
+# called when goal waypoint is reached
+func goal():
+	# don't play explode sounds when all exploding at once
+	explode(false)
