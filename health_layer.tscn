@@ -79,6 +79,7 @@ script = ExtResource( 63 )
 [node name="margin_container" type="MarginContainer" parent="."]
 margin_right = 117.0
 margin_bottom = 111.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -86,6 +87,7 @@ __meta__ = {
 [node name="texture_progress" type="TextureProgress" parent="margin_container"]
 margin_right = 117.0
 margin_bottom = 111.0
+mouse_filter = 2
 texture_over = ExtResource( 11 )
 texture_progress = ExtResource( 41 )
 fill_mode = 8
@@ -95,7 +97,7 @@ position = Vector2( 12, -3 )
 scale = Vector2( 3, 3 )
 z_index = -1
 frames = SubResource( 1 )
-frame = 45
+frame = 59
 playing = true
 centered = false
 
