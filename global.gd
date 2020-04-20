@@ -43,7 +43,7 @@ const abilities_prototype = {
 
 func get_random_abilites(num):
 	randomize()
-	var ability_names = global.abilities.keys().duplicate()
+	var ability_names = abilities.keys().duplicate()
 	ability_names.shuffle()
 	return ability_names.slice(0, num-1)
 
@@ -51,6 +51,11 @@ func reset():
 	player_health = 100
 	abilities = abilities_prototype.duplicate()
 	ability_budget = 0
+	
+	for key in abilities.keys():
+		abilities[key]["active"] = false
+	
+	get_tree().call_group("abilities", "update_abilities")
 
 
 
