@@ -25,6 +25,8 @@
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
 
+var things_hit = []
+
 func _ready():
 	$animation_player.play(\"swing\")
 	
@@ -32,9 +34,13 @@ func _ready():
 	
 	queue_free()
 
+
 func _on_hitbox_body_entered(body):
-	if body.has_method(\"hit_by_small_red_sword\"):
+	if not things_hit.has(body) and body.has_method(\"hit_by_small_red_sword\"):
+		things_hit.append(body)
 		body.hit_by_small_red_sword()
+
+
 "
 
 [sub_resource type="SpriteFrames" id=2]
@@ -166,6 +172,7 @@ disabled = true
 
 [node name="audio_stream_player_2d" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 21 )
+volume_db = -5.0
 max_distance = 1000.0
 attenuation = 2.0
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

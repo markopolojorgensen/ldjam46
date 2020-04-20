@@ -12,7 +12,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 1.0
+radius = 65.0
 
 [node name="goal_waypoint" instance=ExtResource( 1 )]
 is_goal = true
@@ -26,3 +26,14 @@ raycast_path = NodePath("../../goal_waypoint/aggro_raycast")
 
 [node name="collision_shape_2d" parent="aggro" index="0"]
 shape = SubResource( 2 )
+
+[node name="continue_button" type="Position2D" parent="." index="6"]
+position = Vector2( 0, -180 )
+
+[node name="ability_button_positions" type="Node2D" parent="." index="7"]
+
+[node name="position_2d" type="Position2D" parent="ability_button_positions" index="0"]
+position = Vector2( -192, 0 )
+
+[node name="position_2d2" type="Position2D" parent="ability_button_positions" index="1"]
+position = Vector2( 192, 0 )

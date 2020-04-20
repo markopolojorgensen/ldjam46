@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=2]
+[gd_scene load_steps=75 format=2]
 
 [ext_resource path="res://addons/aggro/aggro.gd" type="Script" id=1]
 [ext_resource path="res://addons/movement/top_down_movement.gd" type="Script" id=2]
@@ -85,6 +85,25 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=4]
 radius = 700.0
 
+[sub_resource type="Animation" id=5]
+resource_name = "fade_out"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 120.0
+
 [node name="payload" type="RigidBody2D"]
 collision_layer = 8
 collision_mask = 15
@@ -143,4 +162,15 @@ stream = ExtResource( 66 )
 
 [node name="fanfare" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 67 )
+
+[node name="animation_player" type="AnimationPlayer" parent="."]
+anims/fade_out = SubResource( 5 )
+
+[node name="burning_aura" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="burning_aura"]
+position = Vector2( 2.86389, -38.6631 )
+shape = SubResource( 6 )
 [connection signal="aggro" from="waypoint_aggro" to="." method="_on_waypoint_aggro_aggro"]

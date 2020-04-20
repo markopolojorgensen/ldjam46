@@ -26,7 +26,7 @@
 [ext_resource path="res://abilities/grey_sword.gd" type="Script" id=24]
 [ext_resource path="res://external/sunvox/wheow.wav" type="AudioStream" id=25]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 14 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 21 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 10 ), ExtResource( 18 ), ExtResource( 9 ), ExtResource( 22 ), ExtResource( 17 ), ExtResource( 20 ), ExtResource( 6 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 12 ), ExtResource( 16 ), ExtResource( 11 ), ExtResource( 23 ) ],
 "loop": false,
@@ -34,7 +34,7 @@ animations = [ {
 "speed": 60.0
 } ]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "swing"
 length = 0.4
 step = 0.005
@@ -84,7 +84,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0.185, 0.245 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 4, 0 ]
+"values": [ 20, 0 ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath(".:modulate")
@@ -131,15 +131,14 @@ script = ExtResource( 24 )
 [node name="animated_sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 3, 3 )
 z_index = -1
-frames = SubResource( 2 )
-frame = 22
+frames = SubResource( 1 )
 
 [node name="animation_player" type="AnimationPlayer" parent="."]
-anims/swing = SubResource( 3 )
+anims/swing = SubResource( 2 )
 
 [node name="hitbox" type="Area2D" parent="."]
-position = Vector2( -41.599, 27.7055 )
-rotation = 1.74292
+position = Vector2( -37.7301, 2.94455 )
+rotation = 0.174257
 collision_layer = 0
 collision_mask = 0
 
@@ -151,4 +150,5 @@ disabled = true
 
 [node name="audio_stream_player_2d" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 25 )
+volume_db = -5.0
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

@@ -48,4 +48,6 @@ shape = SubResource( 3 )
 
 [node name="checkpoint_ding" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
+
+[node name="tween" type="Tween" parent="."]
 [connection signal="aggro" from="aggro" to="." method="_on_aggro_aggro"]

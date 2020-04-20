@@ -1,28 +1,38 @@
 extends RigidBody2D
 
-var health = 10
+export(int) var max_health = 10
+var current_health
 
 var current_target_ref : WeakRef
 
 const small_red_sword_scene = preload("res://abilities/small_red_sword.tscn")
-const striking_distance = 80
-const sword_offset = 15
+export(int) var striking_distance = 90
+export(int) var sword_offset = 15
 
 const knockback = 1000
 var pending_impulse = Vector2()
 
 const explode_fx = preload("res://fx/enemy_explode_fx.tscn")
 
+var difficulty = "easy" setget set_difficulty
+
 func _ready():
 	$animated_sprite.play()
 	$animated_sprite.frame = rand_range(0, 100)
 	add_to_group("enemy")
 	add_to_group("goal")
+	
+	current_health = max_health
+	$health_hud.max_value = max_health
+	$health_hud.value = current_health
+	
+	
 
 func _integrate_forces(state):
-	$movement.do_movement(state)
-	state.apply_central_impulse(pending_impulse)
-	pending_impulse = Vector2()
+	if is_alive():
+		$movement.do_movement(state)
+		state.apply_central_impulse(pending_impulse)
+		pending_impulse = Vector2()
 
 func _process(_delta):
 	# maybe attack target
@@ -36,11 +46,12 @@ func _process(_delta):
 				inst.rotation = $aggro_raycast.cast_to.angle()
 	
 	# update health hud
-	$health_hud.value = health
-	if health >= 10:
+	$health_hud.value = current_health
+	if current_health >= max_health:
 		$health_hud.hide()
 	else:
 		$health_hud.show()
+
 
 func get_intended_direction():
 	var direction = Vector2()
@@ -58,8 +69,12 @@ func _on_aggro_aggro_lost(_entity):
 
 func hit_by_grey_sword(player_position):
 	$ouch.play()
-	health -= 5
-	if health <= 0:
+	if global.abilities["double_damage"]["active"]:
+		current_health -= 10
+	else:
+		current_health -= 5
+	
+	if current_health <= 0:
 		explode(true)
 	
 	# knockback
@@ -79,3 +94,19 @@ func explode(sfx):
 func goal():
 	# don't play explode sounds when all exploding at once
 	explode(false)
+
+func is_alive():
+	return current_health > 0
+
+func set_difficulty(new_difficulty):
+	difficulty = new_difficulty
+	if difficulty == "medium":
+		max_health *= 2
+	elif difficulty == "hard":
+		max_health *= 4
+
+func burn(delta):
+	current_health -= delta * max(max_health * 0.1, 2)
+	if current_health <= 0:
+		explode(true)
+

@@ -1,0 +1,623 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://external/aseprite/wall_00.png" type="Texture" id=2]
+[ext_resource path="res://addons/camera_limiter/camera_limiting_area.gd" type="Script" id=3]
+[ext_resource path="res://wall_blocks/wall_block.tscn" type="PackedScene" id=4]
+[ext_resource path="res://wall_blocks/wall_blocks_b.tscn" type="PackedScene" id=5]
+[ext_resource path="res://goal_waypoint.tscn" type="PackedScene" id=6]
+[ext_resource path="res://stage.gd" type="Script" id=15]
+[ext_resource path="res://external/aseprite/tiles.png" type="Texture" id=72]
+[ext_resource path="res://waypoint.tscn" type="PackedScene" id=73]
+[ext_resource path="res://enemy_position.tscn" type="PackedScene" id=74]
+[ext_resource path="res://buttons/start_button.tscn" type="PackedScene" id=76]
+
+[sub_resource type="TileSet" id=1]
+0/name = "tiles.png 0"
+0/texture = ExtResource( 72 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 256, 256 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [  ]
+0/z_index = 0
+1/name = "tiles.png 1"
+1/texture = ExtResource( 72 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 256, 0, 256, 256 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shapes = [  ]
+1/z_index = 0
+2/name = "tiles.png 2"
+2/texture = ExtResource( 72 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 256, 256, 256 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shapes = [  ]
+2/z_index = 0
+3/name = "tiles.png 3"
+3/texture = ExtResource( 72 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 256, 256, 256, 256 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shapes = [  ]
+3/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 28, 6, 22, 12, 28, 6, 34 )
+
+[sub_resource type="TileSet" id=3]
+0/name = "wall_00.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 1, 0, 12, 34 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 561, 315 )
+
+[node name="stage_2" type="Node2D"]
+script = ExtResource( 15 )
+
+[node name="ground" type="TileMap" parent="."]
+scale = Vector2( 3, 3 )
+z_index = -50
+tile_set = SubResource( 1 )
+cell_size = Vector2( 256, 256 )
+format = 1
+tile_data = PoolIntArray( -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0 )
+
+[node name="front_walls" type="TileMap" parent="."]
+scale = Vector2( 3, 3 )
+z_index = 1
+tile_set = SubResource( 3 )
+cell_size = Vector2( 12, 12 )
+format = 1
+tile_data = PoolIntArray( -2555835, 0, 0, -2555782, 0, 0, -2490299, 0, 0, -2490246, 0, 0, -2424763, 0, 0, -2424710, 0, 0, -2359227, 0, 0, -2359174, 0, 0, -2293691, 0, 0, -2293638, 0, 0, -2228155, 0, 0, -2228102, 0, 0, -2162619, 0, 0, -2162566, 0, 0, -2097083, 0, 0, -2097030, 0, 0, -2031547, 0, 0, -2031494, 0, 0, -1966011, 0, 0, -1965958, 0, 0, -1900475, 0, 0, -1900422, 0, 0, -1834939, 0, 0, -1834886, 0, 0, -1769403, 0, 0, -1769350, 0, 0, -1703867, 0, 0, -1703814, 0, 0, -1638331, 0, 0, -1638278, 0, 0, -1572795, 0, 0, -1572742, 0, 0, -1507259, 0, 0, -1507206, 0, 0, -1441723, 0, 0, -1441670, 0, 0, -1376187, 0, 0, -1376134, 0, 0, -1310651, 0, 0, -1310598, 0, 0, -1245115, 0, 0, -1245062, 0, 0, -1179579, 0, 0, -1179526, 0, 0, -1114043, 0, 0, -1113990, 0, 0, -1048507, 0, 0, -1048454, 0, 0, -982971, 0, 0, -982918, 0, 0, -917435, 0, 0, -917382, 0, 0, -851899, 0, 0, -851846, 0, 0, -786363, 0, 0, -786310, 0, 0, -720827, 0, 0, -720774, 0, 0, -655291, 0, 0, -655238, 0, 0, -589755, 0, 0, -589702, 0, 0, -524219, 0, 0, -524166, 0, 0, -458683, 0, 0, -458630, 0, 0, -393147, 0, 0, -393094, 0, 0, -327611, 0, 0, -327558, 0, 0, -262075, 0, 0, -262022, 0, 0, -196539, 0, 0, -196486, 0, 0, -131003, 0, 0, -130950, 0, 0, -65467, 0, 0, -65414, 0, 0, 69, 0, 0, 122, 0, 0, 65605, 0, 0, 65658, 0, 0, 131141, 0, 0, 131194, 0, 0, 196677, 0, 0, 196730, 0, 0, 262266, 0, 0, 327682, 0, 0, 327802, 0, 0, 393218, 0, 0, 393338, 0, 0, 458754, 0, 0, 458874, 0, 0, 524290, 0, 0, 524410, 0, 0, 589826, 0, 0, 589946, 0, 0, 655362, 0, 0, 655482, 0, 0, 720898, 0, 0, 721018, 0, 0, 786434, 0, 0, 786554, 0, 0, 851970, 0, 0, 852090, 0, 0, 917506, 0, 0, 917626, 0, 0, 983042, 0, 0, 983162, 0, 0, 1048578, 0, 0, 1048698, 0, 0, 1114114, 0, 0, 1114234, 0, 0, 1179650, 0, 0, 1179770, 0, 0, 1245186, 0, 0, 1245306, 0, 0, 1310722, 0, 0, 1310842, 0, 0, 1376258, 0, 0, 1376378, 0, 0, 1441794, 0, 0, 1441914, 0, 0, 1507330, 0, 0, 1507450, 0, 0, 1572866, 0, 0, 1572986, 0, 0, 1638402, 0, 0, 1638522, 0, 0, 1703938, 0, 0, 1704058, 0, 0, 1769474, 0, 0, 1769594, 0, 0, 1835010, 0, 0, 1835130, 0, 0, 1900546, 0, 0, 1900666, 0, 0, 1966082, 0, 0, 1966202, 0, 0, 2031618, 0, 0, 2031738, 0, 0, 2097154, 0, 0, 2097274, 0, 0, 2162690, 0, 0, 2162691, 0, 0, 2162692, 0, 0, 2162693, 0, 0, 2162694, 0, 0, 2162695, 0, 0, 2162696, 0, 0, 2162697, 0, 0, 2162698, 0, 0, 2162699, 0, 0, 2162700, 0, 0, 2162701, 0, 0, 2162702, 0, 0, 2162703, 0, 0, 2162704, 0, 0, 2162705, 0, 0, 2162706, 0, 0, 2162707, 0, 0, 2162708, 0, 0, 2162709, 0, 0, 2162710, 0, 0, 2162711, 0, 0, 2162712, 0, 0, 2162713, 0, 0, 2162714, 0, 0, 2162715, 0, 0, 2162716, 0, 0, 2162717, 0, 0, 2162718, 0, 0, 2162719, 0, 0, 2162720, 0, 0, 2162721, 0, 0, 2162722, 0, 0, 2162723, 0, 0, 2162724, 0, 0, 2162725, 0, 0, 2162726, 0, 0, 2162727, 0, 0, 2162728, 0, 0, 2162729, 0, 0, 2162730, 0, 0, 2162731, 0, 0, 2162732, 0, 0, 2162733, 0, 0, 2162734, 0, 0, 2162735, 0, 0, 2162736, 0, 0, 2162737, 0, 0, 2162738, 0, 0, 2162739, 0, 0, 2162740, 0, 0, 2162741, 0, 0, 2162742, 0, 0, 2162743, 0, 0, 2162744, 0, 0, 2162745, 0, 0, 2162746, 0, 0, 2162747, 0, 0, 2162748, 0, 0, 2162749, 0, 0, 2162750, 0, 0, 2162751, 0, 0, 2162752, 0, 0, 2162753, 0, 0, 2162754, 0, 0, 2162755, 0, 0, 2162756, 0, 0, 2162757, 0, 0, 2162758, 0, 0, 2162759, 0, 0, 2162760, 0, 0, 2162761, 0, 0, 2162762, 0, 0, 2162763, 0, 0, 2162764, 0, 0, 2162765, 0, 0, 2162766, 0, 0, 2162767, 0, 0, 2162768, 0, 0, 2162769, 0, 0, 2162770, 0, 0, 2162771, 0, 0, 2162772, 0, 0, 2162773, 0, 0, 2162774, 0, 0, 2162775, 0, 0, 2162776, 0, 0, 2162777, 0, 0, 2162778, 0, 0, 2162779, 0, 0, 2162780, 0, 0, 2162781, 0, 0, 2162782, 0, 0, 2162783, 0, 0, 2162784, 0, 0, 2162785, 0, 0, 2162786, 0, 0, 2162787, 0, 0, 2162788, 0, 0, 2162789, 0, 0, 2162790, 0, 0, 2162791, 0, 0, 2162792, 0, 0, 2162793, 0, 0, 2162794, 0, 0, 2162795, 0, 0, 2162796, 0, 0, 2162797, 0, 0, 2162798, 0, 0, 2162799, 0, 0, 2162800, 0, 0, 2162801, 0, 0, 2162802, 0, 0, 2162803, 0, 0, 2162804, 0, 0, 2162805, 0, 0, 2162806, 0, 0, 2162807, 0, 0, 2162808, 0, 0, 2162809, 0, 0, 2162810, 0, 0 )
+
+[node name="back_walls" type="TileMap" parent="."]
+scale = Vector2( 3, 3 )
+z_index = -1
+tile_set = SubResource( 3 )
+cell_size = Vector2( 12, 12 )
+format = 1
+tile_data = PoolIntArray( -2621371, 0, 0, -2621370, 0, 0, -2621369, 0, 0, -2621368, 0, 0, -2621367, 0, 0, -2621366, 0, 0, -2621365, 0, 0, -2621364, 0, 0, -2621363, 0, 0, -2621362, 0, 0, -2621361, 0, 0, -2621360, 0, 0, -2621359, 0, 0, -2621358, 0, 0, -2621357, 0, 0, -2621356, 0, 0, -2621355, 0, 0, -2621354, 0, 0, -2621353, 0, 0, -2621352, 0, 0, -2621351, 0, 0, -2621350, 0, 0, -2621349, 0, 0, -2621348, 0, 0, -2621347, 0, 0, -2621346, 0, 0, -2621345, 0, 0, -2621344, 0, 0, -2621343, 0, 0, -2621342, 0, 0, -2621341, 0, 0, -2621340, 0, 0, -2621339, 0, 0, -2621338, 0, 0, -2621337, 0, 0, -2621336, 0, 0, -2621335, 0, 0, -2621334, 0, 0, -2621333, 0, 0, -2621332, 0, 0, -2621331, 0, 0, -2621330, 0, 0, -2621329, 0, 0, -2621328, 0, 0, -2621327, 0, 0, -2621326, 0, 0, -2621325, 0, 0, -2621324, 0, 0, -2621323, 0, 0, -2621322, 0, 0, -2621321, 0, 0, -2621320, 0, 0, -2621319, 0, 0, -2621318, 0, 0, 196676, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262160, 0, 0, 262161, 0, 0, 262162, 0, 0, 262163, 0, 0, 262164, 0, 0, 262165, 0, 0, 262166, 0, 0, 262167, 0, 0, 262168, 0, 0, 262169, 0, 0, 262170, 0, 0, 262171, 0, 0, 262172, 0, 0, 262173, 0, 0, 262174, 0, 0, 262175, 0, 0, 262176, 0, 0, 262177, 0, 0, 262178, 0, 0, 262179, 0, 0, 262180, 0, 0, 262181, 0, 0, 262182, 0, 0, 262183, 0, 0, 262184, 0, 0, 262185, 0, 0, 262186, 0, 0, 262187, 0, 0, 262188, 0, 0, 262189, 0, 0, 262190, 0, 0, 262191, 0, 0, 262192, 0, 0, 262193, 0, 0, 262194, 0, 0, 262195, 0, 0, 262196, 0, 0, 262197, 0, 0, 262198, 0, 0, 262199, 0, 0, 262200, 0, 0, 262201, 0, 0, 262202, 0, 0, 262203, 0, 0, 262204, 0, 0, 262205, 0, 0, 262206, 0, 0, 262207, 0, 0, 262208, 0, 0, 262209, 0, 0, 262210, 0, 0, 262211, 0, 0, 262212, 0, 0 )
+
+[node name="y_sort" type="YSort" parent="."]
+
+[node name="player" parent="y_sort" instance=ExtResource( 1 )]
+position = Vector2( 447, 501 )
+
+[node name="goal_waypoint" parent="y_sort" instance=ExtResource( 6 )]
+position = Vector2( 3261, -1167 )
+spawn_abilities = true
+
+[node name="start_button" parent="y_sort" instance=ExtResource( 76 )]
+position = Vector2( 271.269, 695.626 )
+
+[node name="waypoint" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 543, 717 )
+
+[node name="waypoint_2" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 1110, 726 )
+
+[node name="waypoint_3" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 1632, 729 )
+
+[node name="waypoint_4" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 2175, 732 )
+
+[node name="waypoint_5" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 2715, 735 )
+
+[node name="waypoint_6" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 3219, 981 )
+
+[node name="waypoint_7" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 3774, 930 )
+
+[node name="waypoint_8" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 4071, 558 )
+
+[node name="waypoint_9" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 4098, 57 )
+
+[node name="waypoint_10" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 3621, -204 )
+
+[node name="waypoint_11" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 3462, -669 )
+
+[node name="waypoint_12" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 3261, -1119 )
+play_sfx = false
+
+[node name="waypoint_13" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 3237, -1143 )
+play_sfx = false
+
+[node name="waypoint_14" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 3285, -1143 )
+play_sfx = false
+
+[node name="waypoint_15" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 3309, -1167 )
+play_sfx = false
+
+[node name="waypoint_16" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 3213, -1167 )
+play_sfx = false
+
+[node name="waypoint_17" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 3237, -1191 )
+play_sfx = false
+
+[node name="waypoint_18" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 3261, -1215 )
+play_sfx = false
+
+[node name="waypoint_19" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 3285, -1191 )
+play_sfx = false
+
+[node name="enemy_position" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 722.405, 448.611 )
+enemy_type = "medium"
+difficulty = "medium"
+
+[node name="enemy_position2" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 857.689, 583.896 )
+difficulty = "medium"
+
+[node name="enemy_position3" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 981.283, 849.454 )
+difficulty = "medium"
+
+[node name="enemy_position4" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 752.468, 934.634 )
+difficulty = "medium"
+
+[node name="enemy_position5" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 1307.65, 1097.49 )
+difficulty = "medium"
+
+[node name="enemy_position6" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 1409.44, 323.93 )
+difficulty = "medium"
+
+[node name="enemy_position7" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 1329.86, 516.394 )
+difficulty = "medium"
+
+[node name="enemy_position8" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 1613, 927.231 )
+difficulty = "medium"
+
+[node name="enemy_position9" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 1777.71, 592.27 )
+difficulty = "medium"
+
+[node name="enemy_position10" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 2027.54, 340.586 )
+difficulty = "medium"
+
+[node name="enemy_position11" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 2049.75, 875.414 )
+difficulty = "medium"
+
+[node name="enemy_position12" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 1616.71, 542.303 )
+difficulty = "medium"
+
+[node name="enemy_position13" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 1812.87, 342.437 )
+difficulty = "medium"
+
+[node name="enemy_position14" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 1812.87, 342.437 )
+difficulty = "medium"
+
+[node name="enemy_position15" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 2410.62, 966.094 )
+difficulty = "medium"
+
+[node name="enemy_position16" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 2484.64, 949.438 )
+difficulty = "medium"
+
+[node name="enemy_position17" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 2464.29, 995.704 )
+difficulty = "medium"
+
+[node name="enemy_position18" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 2947.3, 77.7985 )
+difficulty = "medium"
+
+[node name="enemy_position19" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3013.92, 92.6035 )
+difficulty = "medium"
+
+[node name="enemy_position20" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 2954.7, 137.018 )
+difficulty = "medium"
+
+[node name="enemy_position21" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 2882.53, 111.11 )
+difficulty = "medium"
+
+[node name="enemy_position22" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 2888.08, 20.4294 )
+difficulty = "medium"
+
+[node name="enemy_position23" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 2962.1, 13.0269 )
+difficulty = "medium"
+
+[node name="enemy_position24" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3043.53, 161.076 )
+difficulty = "medium"
+
+[node name="enemy_position25" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3069.44, 64.8442 )
+difficulty = "medium"
+
+[node name="enemy_position26" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 4309.35, 1149.3 )
+difficulty = "medium"
+
+[node name="enemy_position27" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3672.74, 792.136 )
+difficulty = "medium"
+
+[node name="enemy_position28" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3310.02, 888.368 )
+difficulty = "medium"
+
+[node name="enemy_position29" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3137.91, 1058.62 )
+difficulty = "medium"
+
+[node name="enemy_position30" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3284.11, 1069.73 )
+difficulty = "medium"
+
+[node name="enemy_position31" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 2930.64, 742.169 )
+difficulty = "medium"
+
+[node name="enemy_position32" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3928.12, 434.967 )
+difficulty = "medium"
+
+[node name="enemy_position33" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 4089.13, 658.891 )
+difficulty = "medium"
+
+[node name="enemy_position34" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 4185.36, 553.406 )
+difficulty = "medium"
+
+[node name="enemy_position35" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 4115.04, 416.461 )
+difficulty = "medium"
+
+[node name="enemy_position36" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3976.24, 597.821 )
+difficulty = "medium"
+
+[node name="enemy_position37" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3911.47, 901.322 )
+difficulty = "medium"
+
+[node name="enemy_position38" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3974.39, 31.5327 )
+difficulty = "medium"
+
+[node name="enemy_position39" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 4064.05, -297.229 )
+difficulty = "medium"
+
+[node name="enemy_position40" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3675.51, -225.148 )
+difficulty = "medium"
+
+[node name="enemy_position41" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3735.29, -524.022 )
+difficulty = "medium"
+
+[node name="enemy_position42" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3487.4, -197.018 )
+difficulty = "medium"
+
+[node name="enemy_position43" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3385.43, -604.894 )
+difficulty = "medium"
+
+[node name="enemy_position44" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3541.9, -756.089 )
+difficulty = "medium"
+
+[node name="enemy_position45" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3330.93, -785.977 )
+difficulty = "medium"
+
+[node name="enemy_position46" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3513.77, -631.265 )
+difficulty = "medium"
+
+[node name="enemy_position47" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3118.2, -851.026 )
+difficulty = "medium"
+
+[node name="enemy_position48" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3090.07, -432.602 )
+difficulty = "medium"
+
+[node name="enemy_position49" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3596.4, -902.01 )
+difficulty = "medium"
+
+[node name="enemy_position50" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3100.62, -1016.29 )
+difficulty = "medium"
+
+[node name="enemy_position53" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3849.57, -981.124 )
+difficulty = "medium"
+
+[node name="enemy_position54" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 4035.92, -757.847 )
+difficulty = "medium"
+
+[node name="enemy_position55" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 2808.78, -731.476 )
+difficulty = "medium"
+
+[node name="enemy_position56" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 2655.83, -552.151 )
+difficulty = "medium"
+
+[node name="enemy_position57" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 2606.6, -740.266 )
+difficulty = "medium"
+
+[node name="enemy_position58" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 2657.58, -314.81 )
+difficulty = "medium"
+
+[node name="enemy_position51" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3237.75, -988.156 )
+difficulty = "medium"
+
+[node name="enemy_position52" parent="y_sort" instance=ExtResource( 74 )]
+position = Vector2( 3420.59, -972.333 )
+enemy_type = "boss"
+difficulty = "medium"
+
+[node name="wall_block" parent="y_sort" instance=ExtResource( 4 )]
+position = Vector2( 642, 510 )
+
+[node name="wall_block2" parent="y_sort" instance=ExtResource( 4 )]
+position = Vector2( 678, 546 )
+
+[node name="wall_block3" parent="y_sort" instance=ExtResource( 4 )]
+position = Vector2( 714, 582 )
+
+[node name="wall_block4" parent="y_sort" instance=ExtResource( 4 )]
+position = Vector2( 753, 618 )
+
+[node name="wall_block5" parent="y_sort" instance=ExtResource( 4 )]
+position = Vector2( 972, 618 )
+
+[node name="wall_block6" parent="y_sort" instance=ExtResource( 4 )]
+position = Vector2( 1008, 582 )
+
+[node name="wall_block7" parent="y_sort" instance=ExtResource( 4 )]
+position = Vector2( 1044, 546 )
+
+[node name="wall_block8" parent="y_sort" instance=ExtResource( 4 )]
+position = Vector2( 1080, 510 )
+
+[node name="wall_block9" parent="y_sort" instance=ExtResource( 4 )]
+position = Vector2( 3048, -78 )
+
+[node name="wall_block10" parent="y_sort" instance=ExtResource( 4 )]
+position = Vector2( 3813, -753 )
+
+[node name="wall_block11" parent="y_sort" instance=ExtResource( 4 )]
+position = Vector2( 2796, -987 )
+
+[node name="wall_block12" parent="y_sort" instance=ExtResource( 4 )]
+position = Vector2( 3588, -1221 )
+
+[node name="wall_block13" parent="y_sort" instance=ExtResource( 4 )]
+position = Vector2( 3039, 807 )
+
+[node name="wall_block14" parent="y_sort" instance=ExtResource( 4 )]
+position = Vector2( 2904, 993 )
+
+[node name="wall_block15" parent="y_sort" instance=ExtResource( 4 )]
+position = Vector2( 4293, 1047 )
+
+[node name="wall_block_b" parent="y_sort" instance=ExtResource( 5 )]
+position = Vector2( 1209, 1011 )
+
+[node name="wall_block_b2" parent="y_sort" instance=ExtResource( 5 )]
+position = Vector2( 2877, 354 )
+
+[node name="wall_block_b3" parent="y_sort" instance=ExtResource( 5 )]
+position = Vector2( 3336, 156 )
+
+[node name="wall_block_b4" parent="y_sort" instance=ExtResource( 5 )]
+position = Vector2( 3504, 591 )
+
+[node name="wall_block_b5" parent="y_sort" instance=ExtResource( 5 )]
+position = Vector2( 3801, 261 )
+
+[node name="wall_block_b6" parent="y_sort" instance=ExtResource( 5 )]
+position = Vector2( 3234, -210 )
+
+[node name="wall_block_b7" parent="y_sort" instance=ExtResource( 5 )]
+position = Vector2( 3918, -300 )
+
+[node name="wall_block_b8" parent="y_sort" instance=ExtResource( 5 )]
+position = Vector2( 3177, -639 )
+
+[node name="wall_block_b9" parent="y_sort" instance=ExtResource( 5 )]
+position = Vector2( 3645, -1014 )
+
+[node name="camera_limiters" type="Node2D" parent="."]
+visible = false
+
+[node name="camera_limits_start_left" type="Area2D" parent="camera_limiters"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 3 )
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="camera_limiters/camera_limits_start_left"]
+position = Vector2( 561, 315 )
+shape = SubResource( 4 )
+
+[node name="collision_shape_2d2" type="CollisionShape2D" parent="camera_limiters/camera_limits_start_left"]
+position = Vector2( 561, 945 )
+shape = SubResource( 4 )
+
+[node name="collision_shape_2d3" type="CollisionShape2D" parent="camera_limiters/camera_limits_start_left"]
+position = Vector2( 561, 1575 )
+shape = SubResource( 4 )
+
+[node name="limit_left" type="Position2D" parent="camera_limiters/camera_limits_start_left"]
+
+[node name="camera_limits_goal_left" type="Area2D" parent="camera_limiters"]
+position = Vector2( 2304, -1575 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 3 )
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="camera_limiters/camera_limits_goal_left"]
+position = Vector2( 561, 315 )
+shape = SubResource( 4 )
+
+[node name="collision_shape_2d2" type="CollisionShape2D" parent="camera_limiters/camera_limits_goal_left"]
+position = Vector2( 561, 945 )
+shape = SubResource( 4 )
+
+[node name="collision_shape_2d3" type="CollisionShape2D" parent="camera_limiters/camera_limits_goal_left"]
+position = Vector2( 561, 1320 )
+shape = SubResource( 4 )
+
+[node name="limit_left" type="Position2D" parent="camera_limiters/camera_limits_goal_left"]
+
+[node name="camera_limit_start_top" type="Area2D" parent="camera_limiters"]
+position = Vector2( 561, 315 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 3 )
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="camera_limiters/camera_limit_start_top"]
+shape = SubResource( 4 )
+
+[node name="collision_shape_2d2" type="CollisionShape2D" parent="camera_limiters/camera_limit_start_top"]
+position = Vector2( 1122, 0 )
+shape = SubResource( 4 )
+
+[node name="collision_shape_2d3" type="CollisionShape2D" parent="camera_limiters/camera_limit_start_top"]
+position = Vector2( 1338, 0 )
+shape = SubResource( 4 )
+
+[node name="limit_top" type="Position2D" parent="camera_limiters/camera_limit_start_top"]
+position = Vector2( 0, -315 )
+
+[node name="camera_limit_goal_top" type="Area2D" parent="camera_limiters"]
+position = Vector2( 2721, -1221 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 3 )
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="camera_limiters/camera_limit_goal_top"]
+shape = SubResource( 4 )
+
+[node name="collision_shape_2d2" type="CollisionShape2D" parent="camera_limiters/camera_limit_goal_top"]
+position = Vector2( 1122, 0 )
+shape = SubResource( 4 )
+
+[node name="collision_shape_2d3" type="CollisionShape2D" parent="camera_limiters/camera_limit_goal_top"]
+position = Vector2( 1338, 0 )
+shape = SubResource( 4 )
+
+[node name="limit_top" type="Position2D" parent="camera_limiters/camera_limit_goal_top"]
+position = Vector2( 0, -315 )
+
+[node name="camera_limit_bottom" type="Area2D" parent="camera_limiters"]
+position = Vector2( 573, 1038 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 3 )
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="camera_limiters/camera_limit_bottom"]
+shape = SubResource( 4 )
+
+[node name="collision_shape_2d2" type="CollisionShape2D" parent="camera_limiters/camera_limit_bottom"]
+position = Vector2( 1122, 0 )
+shape = SubResource( 4 )
+
+[node name="collision_shape_2d3" type="CollisionShape2D" parent="camera_limiters/camera_limit_bottom"]
+position = Vector2( 2244, 0 )
+shape = SubResource( 4 )
+
+[node name="collision_shape_2d4" type="CollisionShape2D" parent="camera_limiters/camera_limit_bottom"]
+position = Vector2( 3366, 0 )
+shape = SubResource( 4 )
+
+[node name="limit_bottom" type="Position2D" parent="camera_limiters/camera_limit_bottom"]
+position = Vector2( 0, 315 )
+
+[node name="camera_limits_right" type="Area2D" parent="camera_limiters"]
+position = Vector2( 3945, 1026 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 3 )
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="camera_limiters/camera_limits_right"]
+shape = SubResource( 4 )
+
+[node name="collision_shape_2d2" type="CollisionShape2D" parent="camera_limiters/camera_limits_right"]
+position = Vector2( 0, -615 )
+shape = SubResource( 4 )
+
+[node name="collision_shape_2d3" type="CollisionShape2D" parent="camera_limiters/camera_limits_right"]
+position = Vector2( 0, -1230 )
+shape = SubResource( 4 )
+
+[node name="collision_shape_2d4" type="CollisionShape2D" parent="camera_limiters/camera_limits_right"]
+position = Vector2( 0, -1851 )
+shape = SubResource( 4 )
+
+[node name="collision_shape_2d5" type="CollisionShape2D" parent="camera_limiters/camera_limits_right"]
+position = Vector2( 0, -2355 )
+shape = SubResource( 4 )
+
+[node name="limit_right" type="Position2D" parent="camera_limiters/camera_limits_right"]
+position = Vector2( 561, 0 )

@@ -1,0 +1,126 @@
+[gd_scene load_steps=69 format=2]
+
+[ext_resource path="res://addons/movement/top_down_movement.gd" type="Script" id=1]
+[ext_resource path="res://addons/camera_limiter/focus_limiter.gd" type="Script" id=2]
+[ext_resource path="res://addons/movement/user_input_direction.gd" type="Script" id=3]
+[ext_resource path="res://player.gd" type="Script" id=4]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_20.png" type="Texture" id=5]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_03.png" type="Texture" id=6]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_57.png" type="Texture" id=7]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_46.png" type="Texture" id=8]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_52.png" type="Texture" id=9]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_06.png" type="Texture" id=10]
+[ext_resource path="res://external/sunvox/ouch.wav" type="AudioStream" id=11]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_22.png" type="Texture" id=12]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_27.png" type="Texture" id=13]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_30.png" type="Texture" id=14]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_31.png" type="Texture" id=15]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_53.png" type="Texture" id=16]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_00.png" type="Texture" id=17]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_45.png" type="Texture" id=18]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_58.png" type="Texture" id=19]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_38.png" type="Texture" id=20]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_39.png" type="Texture" id=21]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_21.png" type="Texture" id=22]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_37.png" type="Texture" id=23]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_15.png" type="Texture" id=24]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_13.png" type="Texture" id=25]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_25.png" type="Texture" id=26]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_01.png" type="Texture" id=27]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_26.png" type="Texture" id=28]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_34.png" type="Texture" id=29]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_10.png" type="Texture" id=30]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_36.png" type="Texture" id=31]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_08.png" type="Texture" id=32]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_11.png" type="Texture" id=33]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_29.png" type="Texture" id=34]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_14.png" type="Texture" id=35]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_05.png" type="Texture" id=36]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_44.png" type="Texture" id=37]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_28.png" type="Texture" id=38]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_09.png" type="Texture" id=39]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_19.png" type="Texture" id=40]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_04.png" type="Texture" id=41]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_18.png" type="Texture" id=42]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_02.png" type="Texture" id=43]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_55.png" type="Texture" id=44]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_54.png" type="Texture" id=45]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_24.png" type="Texture" id=46]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_12.png" type="Texture" id=47]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_23.png" type="Texture" id=48]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_48.png" type="Texture" id=49]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_56.png" type="Texture" id=50]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_40.png" type="Texture" id=51]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_07.png" type="Texture" id=52]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_42.png" type="Texture" id=53]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_51.png" type="Texture" id=54]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_43.png" type="Texture" id=55]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_50.png" type="Texture" id=56]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_35.png" type="Texture" id=57]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_49.png" type="Texture" id=58]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_17.png" type="Texture" id=59]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_41.png" type="Texture" id=60]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_47.png" type="Texture" id=61]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_16.png" type="Texture" id=62]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_33.png" type="Texture" id=63]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_32.png" type="Texture" id=64]
+[ext_resource path="res://external/pfxd/player/aseprite_frames/player_59.png" type="Texture" id=65]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.25
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 33.0
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 17 ), ExtResource( 27 ), ExtResource( 43 ), ExtResource( 6 ), ExtResource( 41 ), ExtResource( 36 ), ExtResource( 10 ), ExtResource( 52 ), ExtResource( 32 ), ExtResource( 39 ), ExtResource( 30 ), ExtResource( 33 ), ExtResource( 47 ), ExtResource( 25 ), ExtResource( 35 ), ExtResource( 24 ), ExtResource( 62 ), ExtResource( 59 ), ExtResource( 42 ), ExtResource( 40 ), ExtResource( 5 ), ExtResource( 22 ), ExtResource( 12 ), ExtResource( 48 ), ExtResource( 46 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 13 ), ExtResource( 38 ), ExtResource( 34 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 29 ), ExtResource( 57 ), ExtResource( 31 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 51 ), ExtResource( 60 ), ExtResource( 53 ), ExtResource( 55 ), ExtResource( 37 ), ExtResource( 18 ), ExtResource( 8 ), ExtResource( 61 ), ExtResource( 49 ), ExtResource( 58 ), ExtResource( 56 ), ExtResource( 54 ), ExtResource( 9 ), ExtResource( 16 ), ExtResource( 45 ), ExtResource( 44 ), ExtResource( 50 ), ExtResource( 7 ), ExtResource( 19 ), ExtResource( 65 ) ],
+"loop": true,
+"name": "default",
+"speed": 60.0
+} ]
+
+[node name="player" type="RigidBody2D"]
+position = Vector2( 1827, 402 )
+collision_layer = 2
+collision_mask = 13
+mode = 2
+physics_material_override = SubResource( 1 )
+linear_damp = 10.0
+script = ExtResource( 4 )
+
+[node name="movement" type="Node" parent="."]
+script = ExtResource( 1 )
+body_path = NodePath("..")
+direction_path = NodePath("direction")
+acceleration = 20000.0
+
+[node name="direction" type="Node" parent="movement"]
+script = ExtResource( 3 )
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="animated_sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -3 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 3 )
+
+[node name="camera_2d" type="Camera2D" parent="."]
+current = true
+smoothing_enabled = true
+smoothing_speed = 6.0
+
+[node name="camera_limiter" type="Node" parent="camera_2d"]
+script = ExtResource( 2 )
+camera_path = NodePath("..")
+
+[node name="sword_cooldown" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
+[node name="ouch" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+volume_db = 5.0
+max_distance = 500.0
+attenuation = 3.0

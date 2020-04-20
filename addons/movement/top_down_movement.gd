@@ -14,7 +14,7 @@ onready var body = get_node(body_path)
 # can be the same as physics body
 # needs get_intended_direction() which returns a Vector2()
 export(NodePath) var direction_path
-onready var direction = get_node(direction_path)
+onready var direction_ref = weakref(get_node(direction_path))
 
 export(float) var acceleration = 1000
 export(float) var default_max_speed = 600
@@ -28,6 +28,12 @@ func _ready():
 
 func do_movement(state):
 	# accelerate in the direction you want to go
+	var direction
+	if direction_ref and direction_ref.get_ref():
+		direction = direction_ref.get_ref()
+	else:
+		return
+	
 	var id = direction.get_intended_direction()
 	if id.length() > 0.1:
 		var move_impulse = id.normalized() * state.step * acceleration

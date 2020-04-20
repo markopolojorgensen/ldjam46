@@ -15,13 +15,13 @@ signal aggro_lost(entity)
 # can't instantiate scenes via plugin, so you have to supply your own raycast node
 # it's fine to add it as a child of the aggro node.
 export(NodePath) var raycast_path
-onready var raycast = get_node(raycast_path)
+onready var raycast_ref = weakref(get_node(raycast_path))
 
 # everything within range, regardless of sight
-var potential_targets = []
+var potential_target_refs = []
 
 # Todo: support aggroing multiple targets!
-var target
+var target_ref
 var aggro_active = false
 
 func _ready():
@@ -32,7 +32,8 @@ func _process(delta):
 	# hack to force area to recognize static bodies
 	position = position
 	
-	if target != null:
+	if target_ref and target_ref.get_ref():
+		var target = target_ref.get_ref()
 		var target_in_sight = can_see(target)
 		if not aggro_active and target_in_sight:
 			emit_signal("aggro", target)
@@ -42,35 +43,43 @@ func _process(delta):
 			aggro_active = false
 	
 	if not aggro_active:
-		for thing in potential_targets:
-			if can_see(thing):
-				target = thing
+		for thing_ref in potential_target_refs:
+			if thing_ref and thing_ref.get_ref():
+				var thing = thing_ref.get_ref()
+				if can_see(thing):
+					target_ref = thing_ref
 
 func can_see(thing):
 	var aggro_point = thing.global_position
 	if thing.has_node("aggro_point"):
 		aggro_point = thing.get_node("aggro_point").global_position
 	
-	raycast.cast_to = aggro_point - global_position
-	raycast.force_raycast_update()
-	
-	return raycast.is_colliding() and raycast.get_collider() == thing
+	if raycast_ref and raycast_ref.get_ref():
+		var raycast = raycast_ref.get_ref()
+		raycast.cast_to = aggro_point - global_position
+		raycast.force_raycast_update()
+		
+		return raycast.is_colliding() and raycast.get_collider() == thing
+	else:
+		return false
 
 func body_entered(body):
 	if body.has_method("triggers_aggro") and body.triggers_aggro():
-		potential_targets.append(body)
+		potential_target_refs.append(weakref(body))
 
 func body_exited(body):
 	if body.has_method("triggers_aggro") and body.triggers_aggro():
-		if potential_targets.has(body):
-			potential_targets.remove(potential_targets.find(body))
+		for ref in potential_target_refs:
+			if ref and ref.get_ref() == body:
+				potential_target_refs.erase(ref)
 		
-		if target == body:
+		if target_ref and target_ref.get_ref() == body:
 			if aggro_active:
-				emit_signal("aggro_lost", target)
+				emit_signal("aggro_lost", target_ref.get_ref())
 				aggro_active = false
-			target = null
+			target_ref = null
 
-
+func potential_targets_has(body):
+	return false
 
 

@@ -39,7 +39,68 @@ PHASE ONE
   players share damage with inferno heart
   main upbeat music
   sfx
+  quieter swish sound
+  TUTORIAL
+    this is you
+    you can move around
+    click to swing sword
+    move cursor to aim sword
+
+    this is the heart
+    keep it alive
+    the heart follows waypoints
+    at the end of the waypoints is a goal
+
+    these are enemies
+    enemies attack you and the heart
+    you take damage
+    the heart takes damage
+    you both take damage
+      you have the same health pool
+    you lose if that health pool reaches zero
+  "Menu"
+    tutorial
+    main quest
+  waypoint animations
+  menu
+
+  enemy progression .5
+  stages .5
   
+  payload moves faster
+  swing as fast as you can click
+  doubles swords
+  moar damage
+  stop moving to recover health
+  payload armor
+  personal armor
+  payload slowly damages nearby enemies
+
+  single target high damage nuke
+
+passive abilities
+  payload moves faster when you're next to it?
+  faster attack speed, lower damage
+  li'l helper guys
+  more ability budget
+  slower enemies
+active abilities
+  aoe damage around self scaled by enemy presence
+  warcry? grab aggro aoe
+  grappling hook aka get over here
+  aoe damage
+  heat seeking missiles
+  low-damage big knockback
+
+  abilities 2
+  enemy types .5
+  music .5
+
+
+
+  pause menu?
+
+  tutorial camera limiters
 
   hold click to autoswing
   longer sword cooldown?
@@ -50,19 +111,8 @@ PHASE ONE
   one choice:
     personal armor & pull aggro? summon wall?
     aoe ranged damage & payload defends itself
-  TUTORIAL
-    sword swings towards mouse cursor
-    heart follows waypoints
-    this is what the goal looks like
-    get the heart to the goal
-    you take damage
-    the heart takes damage
-    you both take damage
-      you have the same health pool
 
 PHASE TWO
-  waypoint animations
-  menu
   shadows for player and enemies and payload
   disco ball???
   payload continues beyond player death?
@@ -106,23 +156,7 @@ music
   ability choice
   escort music (lowkey and intense)
 
-passive abilities
-  player health regeneration (during stages?)
-  player health regeneration (between stages?)
-  payload health regen
-  payload armor
-  personal armor
-  payload moves faster
-  payload moves faster when you're next to it?
-  swing as fast as you can click
-  faster attack speed, lower damage
-  li'l helper guys
-active abilities
-  warcry? grab aggro aoe
-  grappling hook aka get over here
-  aoe damage
-  single target high damage nuke
-  heat seeking missiles
+
 
 
 
@@ -160,10 +194,12 @@ playlist
   fez
   age of mythology
   ff12
-
   hyper light drifter
-  chrono trigger
+
+  monolith
   crypt of the necrodancer
+  risk of rain
+  chrono trigger
   secret of mana
   ff6
   ffcc
@@ -179,8 +215,6 @@ playlist
   katana zero
   kingdom?
   minit?
-  monolith
-  risk of rain
   undertale
   mirror's edge
   double dash
