@@ -95,7 +95,7 @@ position = Vector2( 12, -3 )
 scale = Vector2( 3, 3 )
 z_index = -1
 frames = SubResource( 1 )
-frame = 33
+frame = 45
 playing = true
 centered = false
 
@@ -115,6 +115,7 @@ anchor_bottom = 0.5
 margin_top = -165.0
 margin_right = 152.0
 margin_bottom = 165.0
+mouse_filter = 2
 custom_constants/margin_left = 9
 __meta__ = {
 "_edit_use_anchors_": false
@@ -124,6 +125,7 @@ __meta__ = {
 margin_left = 9.0
 margin_right = 152.0
 margin_bottom = 330.0
+mouse_filter = 2
 script = ExtResource( 64 )
 __meta__ = {
 "_edit_use_anchors_": false
