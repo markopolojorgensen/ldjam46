@@ -4,6 +4,8 @@ export(bool) var is_goal = false
 export(bool) var play_sfx = true
 export(bool) var spawn_abilities = false
 
+var faded = false
+
 const continue_button = preload("res://buttons/finish_stage_button.tscn")
 const ability_button = preload("res://buttons/ability_button.tscn")
 
@@ -11,20 +13,24 @@ func _ready():
 	add_to_group("goal")
 
 func _on_aggro_aggro(_entity):
-	if play_sfx:
-		$checkpoint_ding.play()
-	
-	# non-goals fade out
-	if is_goal:
-		get_tree().call_group("goal", "goal")
-	else:
-		$collision_shape_2d.disabled = true
+	# don't fade twice!
+	if not faded:
+		faded = true
 		
-		$tween.interpolate_property(self, "modulate", Color.white, Color(1,1,1,0), 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN)
-		$tween.start()
+		if play_sfx:
+			$checkpoint_ding.play()
 		
-		yield(get_tree().create_timer(0.5), "timeout")
-		queue_free()
+		# non-goals fade out
+		if is_goal:
+			get_tree().call_group("goal", "goal")
+		else:
+			$collision_shape_2d.disabled = true
+			
+			$tween.interpolate_property(self, "modulate", Color.white, Color(1,1,1,0), 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN)
+			$tween.start()
+			
+			yield(get_tree().create_timer(0.5), "timeout")
+			queue_free()
 
 func triggers_aggro():
 	return true
