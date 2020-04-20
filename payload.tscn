@@ -131,7 +131,6 @@ frames = SubResource( 3 )
 script = ExtResource( 2 )
 body_path = NodePath("..")
 direction_path = NodePath("..")
-acceleration = 1000.0
 default_max_speed = 250.0
 
 [node name="waypoint_aggro" type="Area2D" parent="."]
