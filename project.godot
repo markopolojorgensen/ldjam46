@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="LDJAM 46 | ??? | markopolodev"
+config/name="LDJAM 46 | Theft of the Inferno Heart | markopolodev"
 run/main_scene="res://game.tscn"
 config/icon="res://icon.png"
 
