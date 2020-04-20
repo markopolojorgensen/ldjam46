@@ -89,7 +89,7 @@ collision_layer = 4
 collision_mask = 15
 mode = 2
 physics_material_override = SubResource( 1 )
-linear_damp = 5.0
+linear_damp = 2.0
 script = ExtResource( 61 )
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="."]
@@ -119,8 +119,8 @@ collision_mask = 11
 script = ExtResource( 63 )
 body_path = NodePath("../../boss")
 direction_path = NodePath("../../boss")
-acceleration = 550.0
-default_max_speed = 1000.0
+acceleration = 400.0
+default_max_speed = 250.0
 
 [node name="health_hud" type="TextureProgress" parent="."]
 margin_left = -18.0

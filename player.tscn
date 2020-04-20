@@ -67,7 +67,7 @@
 [ext_resource path="res://external/pfxd/player/aseprite_frames/player_59.png" type="Texture" id=65]
 
 [sub_resource type="PhysicsMaterial" id=1]
-friction = 0.25
+friction = 0.75
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 33.0
@@ -94,6 +94,7 @@ script = ExtResource( 1 )
 body_path = NodePath("..")
 direction_path = NodePath("direction")
 acceleration = 20000.0
+default_max_speed = 800.0
 
 [node name="direction" type="Node" parent="movement"]
 script = ExtResource( 3 )

@@ -120,22 +120,28 @@ position = Vector2( -978, -2898 )
 position = Vector2( -1047, -2469 )
 
 [node name="waypoint_3" parent="y_sort" instance=ExtResource( 73 )]
-position = Vector2( -1113, -1995 )
+position = Vector2( -1029, -2004 )
 
 [node name="waypoint_4" parent="y_sort" instance=ExtResource( 73 )]
-position = Vector2( -402, -2001 )
+position = Vector2( -525, -1929 )
 
 [node name="waypoint_5" parent="y_sort" instance=ExtResource( 73 )]
-position = Vector2( 246, -2337 )
+position = Vector2( 48, -2133 )
+
+[node name="waypoint_9" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 465, -2406 )
+
+[node name="waypoint_10" parent="y_sort" instance=ExtResource( 73 )]
+position = Vector2( 1410, -2433 )
 
 [node name="waypoint_6" parent="y_sort" instance=ExtResource( 73 )]
 position = Vector2( 942, -2556 )
 
 [node name="waypoint_7" parent="y_sort" instance=ExtResource( 73 )]
-position = Vector2( 1659, -2187 )
+position = Vector2( 1734, -2088 )
 
 [node name="waypoint_8" parent="y_sort" instance=ExtResource( 73 )]
-position = Vector2( 1842, -1719 )
+position = Vector2( 1854, -1635 )
 
 [node name="enemy_position" parent="y_sort" instance=ExtResource( 74 )]
 position = Vector2( -813, -2712 )

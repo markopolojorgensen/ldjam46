@@ -8,7 +8,7 @@ var ability_budget = 0
 
 const abilities_prototype = {
 	"payload_speed": {
-		"text": "Increase payload movement speed",
+		"text": "Increase Inferno Heart movement speed",
 		"active": false,
 	},
 	"click_swing": {

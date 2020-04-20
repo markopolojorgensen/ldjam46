@@ -9,7 +9,7 @@ const small_red_sword_scene = preload("res://abilities/small_red_sword.tscn")
 export(int) var striking_distance = 90
 export(int) var sword_offset = 15
 
-const knockback = 1000
+const knockback = 400
 var pending_impulse = Vector2()
 
 const explode_fx = preload("res://fx/enemy_explode_fx.tscn")

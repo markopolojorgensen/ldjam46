@@ -10,11 +10,12 @@ func _ready():
 	add_to_group("inferno_heart")
 	add_to_group("game_over")
 	add_to_group("abilities")
+	
+	update_abilities()
 
 func update_abilities():
 	if global.abilities["payload_speed"]["active"]:
 		$movement.max_speed = 400
-		$movement.acceleration = 1500
 
 func _integrate_forces(state):
 	$movement.do_movement(state)

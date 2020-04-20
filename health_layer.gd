@@ -6,6 +6,7 @@ func _ready():
 	
 	$margin_container.hide()
 	$health_debug.hide()
+	$margin_container2.hide()
 
 func _process(delta):
 	$margin_container/texture_progress.value = 100 - global.player_health
@@ -20,6 +21,7 @@ func _process(delta):
 func start_stage():
 	$margin_container.show()
 	$health_debug.show()
+	$margin_container2.show()
 
 func finish_stage():
 	$margin_container.hide()

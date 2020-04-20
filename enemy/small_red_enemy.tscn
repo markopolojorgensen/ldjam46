@@ -149,7 +149,7 @@ collision_layer = 4
 collision_mask = 15
 mode = 2
 physics_material_override = SubResource( 1 )
-linear_damp = 5.0
+linear_damp = 2.0
 script = ExtResource( 61 )
 max_health = 5
 
@@ -181,7 +181,7 @@ script = ExtResource( 63 )
 body_path = NodePath("..")
 direction_path = NodePath("..")
 acceleration = 700.0
-default_max_speed = 1500.0
+default_max_speed = 300.0
 
 [node name="health_hud" type="TextureProgress" parent="."]
 visible = false

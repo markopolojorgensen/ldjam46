@@ -10,6 +10,8 @@ func _ready():
 	add_to_group("player")
 	add_to_group("game_over")
 	add_to_group("abilities")
+	
+	update_abilities()
 
 
 func update_abilities():

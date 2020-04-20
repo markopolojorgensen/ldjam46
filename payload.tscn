@@ -108,8 +108,9 @@ radius = 120.0
 collision_layer = 8
 collision_mask = 15
 mode = 2
+mass = 4.0
 physics_material_override = SubResource( 1 )
-linear_damp = 1.0
+linear_damp = 2.0
 script = ExtResource( 3 )
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="."]
@@ -130,8 +131,8 @@ frames = SubResource( 3 )
 script = ExtResource( 2 )
 body_path = NodePath("..")
 direction_path = NodePath("..")
-acceleration = 500.0
-default_max_speed = 100.0
+acceleration = 1000.0
+default_max_speed = 250.0
 
 [node name="waypoint_aggro" type="Area2D" parent="."]
 visible = false

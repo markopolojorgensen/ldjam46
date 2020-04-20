@@ -37,11 +37,13 @@ func do_movement(state):
 	var id = direction.get_intended_direction()
 	if id.length() > 0.1:
 		var move_impulse = id.normalized() * state.step * acceleration
+		if (state.linear_velocity + move_impulse).length() > max_speed and state.linear_velocity.length() > 0:
+			move_impulse -= state.linear_velocity.normalized() * (move_impulse.dot(state.linear_velocity) / state.linear_velocity.length())
 		body.apply_impulse(Vector2(), move_impulse)
 	
 	# don't go too fast
-	if state.linear_velocity.length() > max_speed:
-		var capped_lin_vel = state.linear_velocity.normalized() * max_speed
-		state.linear_velocity = capped_lin_vel
+	# if state.linear_velocity.length() > max_speed:
+	#		var capped_lin_vel = state.linear_velocity.normalized() * max_speed
+	#	state.linear_velocity = capped_lin_vel
 
 

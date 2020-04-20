@@ -19,6 +19,7 @@ func _on_aggro_aggro(_entity):
 		
 		# abilities
 		if spawn_abilities:
+			spawn_abilities = false
 			global.ability_budget += 1
 			var abilities : Array = global.get_random_abilites(2)
 			print(abilities)
