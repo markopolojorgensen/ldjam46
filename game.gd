@@ -66,17 +66,17 @@ func finish_stage():
 	advance_stage()
 
 func start_tutorial():
-	stage_progression = tutorial_stage_progression
+	stage_progression = tutorial_stage_progression.duplicate()
 	advance_stage()
 
 func start_game():
 	global.reset()
-	stage_progression = main_stage_progression
+	stage_progression = main_stage_progression.duplicate()
 	advance_stage()
 
 func start_testing():
 	global.ability_budget = 100
-	stage_progression = testing_stage_progression
+	stage_progression = testing_stage_progression.duplicate()
 	advance_stage()
 
 func advance_stage():
