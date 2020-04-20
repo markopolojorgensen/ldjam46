@@ -24,6 +24,8 @@ var testing_stage_progression = [
 
 
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	
 	global.reset()
 	
 	add_to_group("game_over")
